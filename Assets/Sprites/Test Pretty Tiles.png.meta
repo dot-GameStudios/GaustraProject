@@ -1,0 +1,1876 @@
+fileFormatVersion: 2
+guid: 9a31d599ceeee174292a179fba3ad5c4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3800727938745642181
+    second: Test Pretty Tiles_0
+  - first:
+      213: 4578765752123565643
+    second: Test Pretty Tiles_1
+  - first:
+      213: -5565578379644696722
+    second: Test Pretty Tiles_2
+  - first:
+      213: -1957649472130498845
+    second: Test Pretty Tiles_3
+  - first:
+      213: -9171196408194427970
+    second: Test Pretty Tiles_4
+  - first:
+      213: -7948814555005121206
+    second: Test Pretty Tiles_5
+  - first:
+      213: -5830171678299378943
+    second: Test Pretty Tiles_6
+  - first:
+      213: 6495816255926759852
+    second: Test Pretty Tiles_7
+  - first:
+      213: -1862515799670082482
+    second: Test Pretty Tiles_8
+  - first:
+      213: 1094500037122055727
+    second: Test Pretty Tiles_9
+  - first:
+      213: -2928920170746987098
+    second: Test Pretty Tiles_10
+  - first:
+      213: 3371393907354720175
+    second: Test Pretty Tiles_11
+  - first:
+      213: 5600641705369066778
+    second: Test Pretty Tiles_12
+  - first:
+      213: 8415998191685250966
+    second: Test Pretty Tiles_13
+  - first:
+      213: -148604452966793787
+    second: Test Pretty Tiles_14
+  - first:
+      213: -7047554371145750894
+    second: Test Pretty Tiles_15
+  - first:
+      213: 3677237645367966983
+    second: Test Pretty Tiles_16
+  - first:
+      213: -672912186430597037
+    second: Test Pretty Tiles_17
+  - first:
+      213: 8110685172737604624
+    second: Test Pretty Tiles_18
+  - first:
+      213: 4675114673740828571
+    second: Test Pretty Tiles_19
+  - first:
+      213: 4450118448640409130
+    second: Test Pretty Tiles_20
+  - first:
+      213: 1663068239601781056
+    second: Test Pretty Tiles_21
+  - first:
+      213: 1336612283113400874
+    second: Test Pretty Tiles_22
+  - first:
+      213: 5546758194842791297
+    second: Test Pretty Tiles_23
+  - first:
+      213: 3907894652970297636
+    second: Test Pretty Tiles_24
+  - first:
+      213: -6303935234428210393
+    second: Test Pretty Tiles_25
+  - first:
+      213: -8680325937644764981
+    second: Test Pretty Tiles_26
+  - first:
+      213: -506865164728927748
+    second: Test Pretty Tiles_27
+  - first:
+      213: 1477201652473153720
+    second: Test Pretty Tiles_28
+  - first:
+      213: -6718649861311159267
+    second: Test Pretty Tiles_29
+  - first:
+      213: -7251131151439643786
+    second: Test Pretty Tiles_30
+  - first:
+      213: 732518290200239266
+    second: Test Pretty Tiles_31
+  - first:
+      213: -358305748484727936
+    second: Test Pretty Tiles_32
+  - first:
+      213: -256391225170452973
+    second: Test Pretty Tiles_33
+  - first:
+      213: 2820578872665396936
+    second: Test Pretty Tiles_34
+  - first:
+      213: -5833797426402702813
+    second: Test Pretty Tiles_35
+  - first:
+      213: -7995557183970967891
+    second: Test Pretty Tiles_36
+  - first:
+      213: 3774219071110591660
+    second: Test Pretty Tiles_37
+  - first:
+      213: 1262841846170007477
+    second: Test Pretty Tiles_38
+  - first:
+      213: 6501238961612064151
+    second: Test Pretty Tiles_39
+  - first:
+      213: 4735928510644272904
+    second: Test Pretty Tiles_40
+  - first:
+      213: 2339810907080462701
+    second: Test Pretty Tiles_41
+  - first:
+      213: -7361708306234430387
+    second: Test Pretty Tiles_42
+  - first:
+      213: -6050847575323249974
+    second: Test Pretty Tiles_43
+  - first:
+      213: -8260785972351781545
+    second: Test Pretty Tiles_44
+  - first:
+      213: 7268575753358475126
+    second: Test Pretty Tiles_45
+  - first:
+      213: 401088138568797201
+    second: Test Pretty Tiles_46
+  - first:
+      213: -2524122177276058451
+    second: Test Pretty Tiles_47
+  - first:
+      213: 2872866927305853603
+    second: Test Pretty Tiles_48
+  - first:
+      213: 3567142971185566562
+    second: Test Pretty Tiles_49
+  - first:
+      213: 3333129715170089391
+    second: Test Pretty Tiles_50
+  - first:
+      213: 8138238460256641298
+    second: Test Pretty Tiles_51
+  - first:
+      213: -654047742679565981
+    second: Test Pretty Tiles_52
+  - first:
+      213: 3621723808247426477
+    second: Test Pretty Tiles_53
+  - first:
+      213: -2212461758505083401
+    second: Test Pretty Tiles_54
+  - first:
+      213: -3686819573005665875
+    second: Test Pretty Tiles_55
+  - first:
+      213: -1953640372406792140
+    second: Test Pretty Tiles_56
+  - first:
+      213: -766189419544204676
+    second: Test Pretty Tiles_57
+  - first:
+      213: 4626012661625104999
+    second: Test Pretty Tiles_58
+  - first:
+      213: 5262691792834258644
+    second: Test Pretty Tiles_59
+  - first:
+      213: 7903070891395710810
+    second: Test Pretty Tiles_60
+  - first:
+      213: -1590364026291460113
+    second: Test Pretty Tiles_61
+  - first:
+      213: 7020702360072682452
+    second: Test Pretty Tiles_62
+  - first:
+      213: 427207348163326532
+    second: Test Pretty Tiles_63
+  - first:
+      213: -7837702036152903607
+    second: Test Pretty Tiles_64
+  - first:
+      213: 7798511271151394362
+    second: Test Pretty Tiles_65
+  - first:
+      213: 3243578029055043194
+    second: Test Pretty Tiles_66
+  - first:
+      213: -1718509883429974104
+    second: Test Pretty Tiles_67
+  - first:
+      213: 1085252056254687353
+    second: Test Pretty Tiles_68
+  - first:
+      213: -7085913194602672968
+    second: Test Pretty Tiles_69
+  - first:
+      213: -3815048761324743344
+    second: Test Pretty Tiles_0
+  - first:
+      213: 4228327779828093360
+    second: Test Pretty Tiles_1
+  - first:
+      213: 662360897244612253
+    second: Test Pretty Tiles_2
+  - first:
+      213: -1804374861206350190
+    second: Test Pretty Tiles_3
+  - first:
+      213: 7875679858546843799
+    second: Test Pretty Tiles_4
+  - first:
+      213: 8852364174276818308
+    second: Test Pretty Tiles_5
+  - first:
+      213: -4232965773532735749
+    second: Test Pretty Tiles_6
+  - first:
+      213: 8325729712623549547
+    second: Test Pretty Tiles_7
+  - first:
+      213: -4626002344276735095
+    second: Test Pretty Tiles_8
+  - first:
+      213: -9059059694992355866
+    second: Test Pretty Tiles_9
+  - first:
+      213: -6964624697739320052
+    second: Test Pretty Tiles_10
+  - first:
+      213: 5095835360999617065
+    second: Test Pretty Tiles_11
+  - first:
+      213: 6608100214189182436
+    second: Test Pretty Tiles_12
+  - first:
+      213: -9024107761752417314
+    second: Test Pretty Tiles_13
+  - first:
+      213: 3480134014040572174
+    second: Test Pretty Tiles_14
+  - first:
+      213: -6954740291069580366
+    second: Test Pretty Tiles_15
+  - first:
+      213: -4959916650249131883
+    second: Test Pretty Tiles_16
+  - first:
+      213: 7845820888786895189
+    second: Test Pretty Tiles_17
+  - first:
+      213: 5563987954823319385
+    second: Test Pretty Tiles_18
+  - first:
+      213: 6526296947844247921
+    second: Test Pretty Tiles_19
+  - first:
+      213: 6039494125885378363
+    second: Test Pretty Tiles_20
+  - first:
+      213: 2186918334210068805
+    second: Test Pretty Tiles_21
+  - first:
+      213: 3293448689397174268
+    second: Test Pretty Tiles_22
+  - first:
+      213: -3587382080507930864
+    second: Test Pretty Tiles_23
+  - first:
+      213: 5832585138393786964
+    second: Test Pretty Tiles_24
+  - first:
+      213: -5480882670308479859
+    second: Test Pretty Tiles_25
+  - first:
+      213: 6088587631557698263
+    second: Test Pretty Tiles_26
+  - first:
+      213: -5023900008218739560
+    second: Test Pretty Tiles_27
+  - first:
+      213: 2455262771081554673
+    second: Test Pretty Tiles_28
+  - first:
+      213: -3044174706343922269
+    second: Test Pretty Tiles_29
+  - first:
+      213: 3657363585773811267
+    second: Test Pretty Tiles_30
+  - first:
+      213: -7988708854586265766
+    second: Test Pretty Tiles_31
+  - first:
+      213: 6567952082116847527
+    second: Test Pretty Tiles_32
+  - first:
+      213: -2201834291961375348
+    second: Test Pretty Tiles_33
+  - first:
+      213: 5125041392536078843
+    second: Test Pretty Tiles_34
+  - first:
+      213: 4311652564480482699
+    second: Test Pretty Tiles_35
+  - first:
+      213: -6604080665810941104
+    second: Test Pretty Tiles_36
+  - first:
+      213: 3163663383783254398
+    second: Test Pretty Tiles_37
+  - first:
+      213: 4076605780471704491
+    second: Test Pretty Tiles_38
+  - first:
+      213: -2612514852438397325
+    second: Test Pretty Tiles_39
+  - first:
+      213: 4422642459284300554
+    second: Test Pretty Tiles_40
+  - first:
+      213: 4714155254221671797
+    second: Test Pretty Tiles_41
+  - first:
+      213: 8407041426475103
+    second: Test Pretty Tiles_42
+  - first:
+      213: 4760302624928755596
+    second: Test Pretty Tiles_43
+  - first:
+      213: -3935762474047942542
+    second: Test Pretty Tiles_44
+  - first:
+      213: -2447353732571281067
+    second: Test Pretty Tiles_45
+  - first:
+      213: -2172674530911838964
+    second: Test Pretty Tiles_46
+  - first:
+      213: 8189056801883558849
+    second: Test Pretty Tiles_47
+  - first:
+      213: -2090321060534321471
+    second: Test Pretty Tiles_48
+  - first:
+      213: -6320143367102567005
+    second: Test Pretty Tiles_49
+  - first:
+      213: 408712151081056018
+    second: Test Pretty Tiles_50
+  - first:
+      213: 5868613834325538047
+    second: Test Pretty Tiles_51
+  - first:
+      213: -3426629928722986081
+    second: Test Pretty Tiles_52
+  - first:
+      213: -6060094716503187495
+    second: Test Pretty Tiles_53
+  - first:
+      213: -104052045030490954
+    second: Test Pretty Tiles_54
+  - first:
+      213: 6881082884766100336
+    second: Test Pretty Tiles_55
+  - first:
+      213: -3640157245823452399
+    second: Test Pretty Tiles_56
+  - first:
+      213: -6247888053532274987
+    second: Test Pretty Tiles_57
+  - first:
+      213: 3645742132411471188
+    second: Test Pretty Tiles_58
+  - first:
+      213: -2505772183058380573
+    second: Test Pretty Tiles_59
+  - first:
+      213: 1711523150820738085
+    second: Test Pretty Tiles_60
+  - first:
+      213: -8840795750099960063
+    second: Test Pretty Tiles_61
+  - first:
+      213: -4107967819143859077
+    second: Test Pretty Tiles_62
+  - first:
+      213: 185236859980638457
+    second: Test Pretty Tiles_63
+  - first:
+      213: -934184486197169234
+    second: Test Pretty Tiles_64
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 400
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Test Pretty Tiles_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5600
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 559cc523fb0490ed0800000000000000
+      internalID: -2447353732571281067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_46
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 5600
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0d1674860c19d1e0800000000000000
+      internalID: -2172674530911838964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_47
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 5600
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c314c916cf55a170800000000000000
+      internalID: 8189056801883558849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_48
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 5600
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ce75580210bdf2e0800000000000000
+      internalID: -2090321060534321471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_49
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 5600
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ad6f4ad7175a48a0800000000000000
+      internalID: -6320143367102567005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_50
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 5600
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 217729439890ca500800000000000000
+      internalID: 408712151081056018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_51
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 5600
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff4bae66031817150800000000000000
+      internalID: 5868613834325538047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_52
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 5600
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9b8eb12c3a2270d0800000000000000
+      internalID: -3426629928722986081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_53
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 5600
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9df1b9d86f736eba0800000000000000
+      internalID: -6060094716503187495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_54
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 5600
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bcfdc167355e8ef0800000000000000
+      internalID: -104052045030490954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5200
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07be0881d648e7f50800000000000000
+      internalID: 6881082884766100336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_56
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 5200
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11bf02475409b7dc0800000000000000
+      internalID: -3640157245823452399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_57
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 5200
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5de4dc40bea0b49a0800000000000000
+      internalID: -6247888053532274987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_58
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 5200
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4559f094727489230800000000000000
+      internalID: 3645742132411471188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_59
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 5200
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e800c4c975b93dd0800000000000000
+      internalID: -2505772183058380573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_60
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 5200
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5240785dc3d80c710800000000000000
+      internalID: 1711523150820738085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_61
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 5200
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10f32871b1f2f4580800000000000000
+      internalID: -8840795750099960063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_62
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 5200
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b74b13f88019df6c0800000000000000
+      internalID: -4107967819143859077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_63
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 5200
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f8647651f7129200800000000000000
+      internalID: 185236859980638457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_64
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 5200
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea37989c82c1903f0800000000000000
+      internalID: -934184486197169234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7600
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b33d92ba31a114bc0800000000000000
+      internalID: -3800727938745642181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_1
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 7600
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b46ac05313b0b8f30800000000000000
+      internalID: 4578765752123565643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_2
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 7600
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e670faf83f713c2b0800000000000000
+      internalID: -5565578379644696722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_3
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 7600
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ee3eea5d2805d4e0800000000000000
+      internalID: -1957649472130498845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_4
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 7600
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb39b34357d59b080800000000000000
+      internalID: -9171196408194427970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_5
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 7600
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4d077fd64320b190800000000000000
+      internalID: -7948814555005121206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_6
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 7600
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10b2c678fb1171fa0800000000000000
+      internalID: -5830171678299378943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_7
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 7600
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca1f8bce776c52a50800000000000000
+      internalID: 6495816255926759852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7200
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e44bc1c8fb30726e0800000000000000
+      internalID: -1862515799670082482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_9
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 7200
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2edf4f1cf1703f00800000000000000
+      internalID: 1094500037122055727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_10
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 7200
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ad362f6f926a57d0800000000000000
+      internalID: -2928920170746987098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_11
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 7200
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa75bc575e899ce20800000000000000
+      internalID: 3371393907354720175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_12
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 7200
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1dd2c225f979bd40800000000000000
+      internalID: 5600641705369066778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_13
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 7200
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69faab5f3c1abc470800000000000000
+      internalID: 8415998191685250966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_14
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 7200
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cd7fd0990d00fdf0800000000000000
+      internalID: -148604452966793787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_15
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 7200
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2962b9493ae023e90800000000000000
+      internalID: -7047554371145750894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6800
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70df9d6d72c280330800000000000000
+      internalID: 3677237645367966983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_17
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 6800
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 358d5c28ee559a6f0800000000000000
+      internalID: -672912186430597037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_18
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 6800
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01c7d0e3131fe8070800000000000000
+      internalID: 8110685172737604624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_19
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 6800
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9fc984a60851e040800000000000000
+      internalID: 4675114673740828571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_20
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 6800
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2ebf9bb62ff1cd30800000000000000
+      internalID: 4450118448640409130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_21
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 6800
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 049c2baa0c7641710800000000000000
+      internalID: 1663068239601781056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_22
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 6800
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2ae5613ac99c8210800000000000000
+      internalID: 1336612283113400874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_23
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 6800
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18d6792b03b0afc40800000000000000
+      internalID: 5546758194842791297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_24
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 6800
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42961f16b71ab3630800000000000000
+      internalID: 3907894652970297636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6400
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72376d0dd4ce388a0800000000000000
+      internalID: -6303935234428210393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_26
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 6400
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc00310dc89498780800000000000000
+      internalID: -8680325937644764981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_27
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 6400
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf9ff4371d047f8f0800000000000000
+      internalID: -506865164728927748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_28
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 6400
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b8484d8313108410800000000000000
+      internalID: 1477201652473153720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_29
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 6400
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d14225e4c8f82c2a0800000000000000
+      internalID: -6718649861311159267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_30
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 6400
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67bbbaac2aece5b90800000000000000
+      internalID: -7251131151439643786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_31
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 6400
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ac9cdef08d6a2a00800000000000000
+      internalID: 732518290200239266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_32
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 6400
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08b5694f1da070bf0800000000000000
+      internalID: -358305748484727936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_33
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 6400
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31e10340a8d117cf0800000000000000
+      internalID: -256391225170452973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_34
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 6400
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c651366a85b42720800000000000000
+      internalID: 2820578872665396936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6000
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32acda346203a0fa0800000000000000
+      internalID: -5833797426402702813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_36
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 6000
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dae761c7a131a0190800000000000000
+      internalID: -7995557183970967891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_37
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 6000
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca43d0e9f38b06430800000000000000
+      internalID: 3774219071110591660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_38
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 6000
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b73670e7f3868110800000000000000
+      internalID: 1262841846170007477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_39
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 6000
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79501daf36a093a50800000000000000
+      internalID: 6501238961612064151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_40
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 6000
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80fb89e63e569b140800000000000000
+      internalID: 4735928510644272904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_41
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 6000
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d619d168f9da87020800000000000000
+      internalID: 2339810907080462701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_42
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 6000
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4caadaac45f5d990800000000000000
+      internalID: -7361708306234430387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_43
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 6000
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac2f2d26032170ca0800000000000000
+      internalID: -6050847575323249974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Test Pretty Tiles_44
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 6000
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7553178fceacb5d80800000000000000
+      internalID: -8260785972351781545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
