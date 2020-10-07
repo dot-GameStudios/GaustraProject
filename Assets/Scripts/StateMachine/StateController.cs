@@ -38,20 +38,34 @@ public class StateController : MonoBehaviour
                 Debug.LogWarning("You need to add state input controllers!");
             }
             else {
-                
+
                 //Loop through all known states.
                 for (int i = states.Length - 1; i >= 0; i--)
                 {
-                    //Loop through all known State Input Controllers.
-                    for (int j = stateInputControllers.Length - 1; j >= 0; j--)
+                    int j = stateInputControllers.Length - 1;
+
+                    while (j >= 0 && states[i].ControllerName != null)
                     {
-                        //Check if the current State has the name of the current State Input Controller.
                         if (states[i].ControllerName == stateInputControllers[j].ControllerName)
                         {
                             //If Yes, set the State's Input Controller to be the one the matches with it.
                             states[i].SetInputController(stateInputControllers[j]);
                         }
+                        j--;
+                        
                     }
+                    /* while (j <= 0 || states[i].ControllerName != null);
+
+                    ////Loop through all known State Input Controllers.
+                    //for (int j = stateInputControllers.Length - 1; j >= 0; j--)
+                    //{
+                    //    //Check if the current State has the name of the current State Input Controller.
+                    //    if (states[i].ControllerName == stateInputControllers[j].ControllerName)
+                    //    {
+                    //        //If Yes, set the State's Input Controller to be the one the matches with it.
+                    //        states[i].SetInputController(stateInputControllers[j]);
+                    //    }
+                    //}*/
                 }
             }
             //Activate all inputs in the Current State's input controller

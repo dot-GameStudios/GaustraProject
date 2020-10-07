@@ -11,7 +11,16 @@ public class StatePlayerMovement : State
     public LayerMask GroundLayer;
     public GameObject rayPosLeft;
     public GameObject rayPosRight;
+    public GameObject playerFeet;
     
+    private Vector2 slopeNormalPerp;
+    private float slopeDownAngle;
+
+    public string MovementInputNode;
+    private DataFloat MovementInput;
+    public PhysicsMaterial2D FrictionLess;
+    public PhysicsMaterial2D SlopeFriction;
+
     //stores a check point for when the player needs to respawn somewhere
     public GameObject CheckPoint;
 
@@ -21,40 +30,73 @@ public class StatePlayerMovement : State
 
 
     public void GetData()
-    {
-        //for (int i = dataBools.Count - 1; i >= 0; i--)
-        //{
-        //    dataBools[i] = data.GetBool(dataBools[i].Name);
-        //}
-        
+    {   
         RigidBody = GetComponent<Rigidbody2D>();
         RB2DTrigger = GetComponent<Rigidbody2DTrigger>();
+        MovementInput = data.GetFloat(MovementInputNode);
     }
  
-    public void GroundCheck(string Condition_)
+    public void GroundCheck(float rayDistance, string Condition_)
     {
-        //Ground check that uses 2 rays for detection
-        float rayDistance = 0.3f;
+        //Ground check that uses 2 rays for detection     
+        RaycastHit2D feetHit = Physics2D.Raycast(playerFeet.transform.position, Vector2.down, rayDistance, GroundLayer);
+
+        RaycastHit2D leftHit = Physics2D.Raycast(rayPosLeft.transform.position, Vector2.left, rayDistance, GroundLayer);
+        RaycastHit2D rightHit = Physics2D.Raycast(rayPosRight.transform.position, Vector2.right, rayDistance, GroundLayer);
+
+        slopeNormalPerp = Vector2.Perpendicular(feetHit.normal).normalized;
+        slopeDownAngle = Vector2.Angle(feetHit.normal, Vector2.up);
+
+        Debug.DrawLine(playerFeet.transform.position, playerFeet.transform.position + Vector3.down* rayDistance, Color.red);
         
-        RaycastHit2D leftHit = Physics2D.Raycast(rayPosLeft.transform.position, Vector2.down, rayDistance, GroundLayer);
-        RaycastHit2D rightHit = Physics2D.Raycast(rayPosRight.transform.position, Vector2.down, rayDistance, GroundLayer);
+        Debug.DrawLine(rayPosRight.transform.position, rayPosRight.transform.position + Vector3.down * rayDistance,Color.red);
+        Debug.DrawLine(rayPosLeft.transform.position, rayPosLeft.transform.position + Vector3.down * rayDistance, Color.red);
+        
 
-        //Debug.DrawRay(rayPosLeft.transform.position, Vector2.down, Color.red);
-        //Debug.DrawRay(rayPosRight.transform.position, Vector2.down, Color.red);
+        Debug.DrawLine(feetHit.point, feetHit.point + slopeNormalPerp, Color.yellow);
 
-        if (leftHit.collider == null && rightHit.collider == null)
+        if (feetHit || rightHit || leftHit)
         {
-            //if both rays return false then Grounded is false
-            SetBoolCondition(Condition_, false);
+            if (slopeDownAngle != 0)
+            {
+                SetBoolNode("IsOnSlope", true);
+                if(MovementInput.Value == 0)
+                {
+                    SetPhysicsMaterial2D(SlopeFriction);
+                }
+            }
+            else
+            {
+                SetBoolNode("IsOnSlope", false);
+
+            }
+            SetVector2Node("SlopeDirection", slopeNormalPerp);
+            //otherwise Grounded is true
+            SetBoolNode(Condition_, true);
+            stateInputController.InputKeyBoolConditionLock("Jump", Condition_);
+            
         }
         else
         {
-            //otherwise Grounded is true
-            SetBoolCondition(Condition_, true);
-            stateInputController.InputKeyBoolLock("Jump", Condition_);
+            //if both rays return false then Grounded is false
+            SetBoolNode(Condition_, false);
+            SetBoolNode("IsOnSlope", false);
         }
 
         
+    }
+
+    public void SetPhysicsMaterial2D(PhysicsMaterial2D newMaterial)
+    {
+        RigidBody.sharedMaterial = newMaterial;
+    }
+
+    public void SetPhysicsMaterial2D(PhysicsMaterial2D newMaterial, string BoolNode)
+    {
+        if (data.GetBool(BoolNode).Value)
+        {
+            RigidBody.sharedMaterial = newMaterial;
+        }
     }
 
     public void CrouchCheck(string condition_)
@@ -67,7 +109,49 @@ public class StatePlayerMovement : State
 
     public void LimitJump(string Condition_)
     {
-        stateInputController.InputKeyBoolLock("Jump", Condition_);
+        stateInputController.InputKeyBoolConditionLock("Jump", Condition_);
+    }
+
+    public void Dodge(float speed) {
+        float DodgeSpeed = speed;
+        Vector2 DodgeDirection = Vector2.zero;
+
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            DodgeDirection += Vector2.left;
+            DodgeDirection.Normalize();
+        }
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            DodgeDirection += Vector2.right;
+            DodgeDirection.Normalize();
+        }
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            DodgeDirection += Vector2.up;
+            DodgeDirection.Normalize();
+        }
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            DodgeDirection += Vector2.down;
+            DodgeDirection.Normalize();
+        }
+
+        Debug.DrawLine(transform.position, transform.position + new Vector3(DodgeDirection.x, DodgeDirection.y, transform.position.z), Color.green);
+        RigidBody.velocity = DodgeDirection * DodgeSpeed;
+        SetFloatNode("ActionlessTimer", 0.5f);
+        SetActionless(true);
+    }
+
+    public void SetActionless(bool value_)
+    {
+        SetBoolNode("Actionless", value_);
+    }
+
+    public void InputLockToggle(string keyName)
+    {
+        //stateInputController.InputKeyBoolLock(key, stateInputController.GetKey(key).toggleActive());
+        stateInputController.InputKeyToggle(keyName);
     }
 
     public void GrabLadder(string Condition_)
@@ -75,7 +159,7 @@ public class StatePlayerMovement : State
         if (RB2DTrigger.ColliderTag == "Ladder")
         {
             ChangeRigidBodyType("Kinematic");
-            SetBoolCondition(Condition_, true);   
+            SetBoolNode(Condition_, true);   
         }
     }
 

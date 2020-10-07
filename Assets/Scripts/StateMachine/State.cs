@@ -21,7 +21,7 @@ public class State : MonoBehaviour
         }
     }
 
-    public class multiParameterEvent : UnityEvent<string, string> { }
+    //public class multiParameterEvent : UnityEvent<string, string> { }
 
 
     private bool active;
@@ -29,14 +29,14 @@ public class State : MonoBehaviour
     [Header("References")]
     public Data data;
     public string ControllerName;
-    private StateInputController StateInputController;
+    [SerializeField]private StateInputController StateInputController;
     public StateInputController stateInputController { get => StateInputController; }
     public List<Transition> Transitions = new List<Transition>(); //holds the states that the current state can transition to
 
     [Header("Events")]
-    public UnityEvent OnStateEnter;
-    public UnityEvent OnUpdate;
-    public UnityEvent OnStateExit;
+    public UnityEvent2 OnStateEnter;
+    public UnityEvent2 OnUpdate;
+    public UnityEvent2 OnStateExit;
 
     // Start is called before the first frame update
     public void Start()
@@ -60,10 +60,13 @@ public class State : MonoBehaviour
 
     public void ActivateInputController(bool value)
     {
-        StateInputController.TotalInputLockToggle(value);
+        if (StateInputController)
+        {
+            StateInputController.TotalInputLockToggle(value);
+        }
     }
     // Update is called once per frame
-    public void Update()
+    public void FixedUpdate()
     {
         if (active)
         {
@@ -71,9 +74,19 @@ public class State : MonoBehaviour
         }
     }
 
-    public void SetBoolCondition(string Condition_, bool value)
+    public void SetBoolNode(string NodeName_, bool value_)
     {
-        data.GetBool(Condition_).Value = value;
+        data.GetBool(NodeName_).Value = value_;
+    }
+
+    public void SetFloatNode(string NodeName_, float value_)
+    {
+        data.GetFloat(NodeName_).Value = value_;
+    }
+
+    public void SetVector2Node(string NodeName_, Vector2 value_)
+    {
+        data.GetVector2(NodeName_).Value = value_;
     }
 
     public void Exit()

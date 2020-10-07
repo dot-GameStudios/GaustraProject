@@ -11,15 +11,19 @@ public class DataInputKey : DataInput
     [SerializeField] private KeyCode positive;
     [SerializeField] private KeyCode negative;
     [SerializeField] private bool active;
+    private enum ActivateType { OnKey, OnKeyDown, OnKeyUp};
+    [SerializeField] private ActivateType ActivatesOn = ActivateType.OnKey;
+
     [Header("Data")]
     [SerializeField] private DataFloat dataNode;
+
     [Header("Events")]
-    [SerializeField] private UnityEvent onPositiveKeyDown;
-    [SerializeField] private UnityEvent onPositiveKey;
-    [SerializeField] private UnityEvent onPositiveKeyUp;
-    [SerializeField] private UnityEvent onNegativeKeyDown;
-    [SerializeField] private UnityEvent onNegativeKey;
-    [SerializeField] private UnityEvent onNegativeKeyUp;
+    [SerializeField] private UnityEvent2 onPositiveKeyDown;
+    [SerializeField] private UnityEvent2 onPositiveKey;
+    [SerializeField] private UnityEvent2 onPositiveKeyUp;
+    [SerializeField] private UnityEvent2 onNegativeKeyDown;
+    [SerializeField] private UnityEvent2 onNegativeKey;
+    [SerializeField] private UnityEvent2 onNegativeKeyUp;
 
     private bool pressedPositive;
     private bool pressedNegative;
@@ -66,5 +70,10 @@ public class DataInputKey : DataInput
     public void SetActive(bool value)
     {
         active = value;
+    }
+
+    public void toggleActive()
+    {
+        active = !active;
     }
 }

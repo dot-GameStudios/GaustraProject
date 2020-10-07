@@ -51,7 +51,7 @@ public class StatePlayerClimb : State
 
     public void LimitJump(string Condition_)
     {
-        stateInputController.InputKeyBoolLock("Jump", Condition_);
+        stateInputController.InputKeyBoolConditionLock("Jump", Condition_);
     }
 
     public void ClimbDownGroundCheck(string Condition_)
@@ -106,7 +106,7 @@ public class StatePlayerClimb : State
     {
         if (CanLeaveLadder)
         {
-            SetBoolCondition(Condition_, false);
+            SetBoolNode(Condition_, false);
         }
         CanLeaveLadder = false;
     }

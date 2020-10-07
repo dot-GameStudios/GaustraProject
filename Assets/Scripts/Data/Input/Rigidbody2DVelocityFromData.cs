@@ -4,18 +4,22 @@ using UnityEngine;
 
 public class Rigidbody2DVelocityFromData : MonoBehaviour
 {
-    private LayerMask GroundLayer;
-
     [Header("Data")]
-    //[SerializeField] private DataFloat dataFloat;
-    //[SerializeField] private DataFloat dataDirection;
-    //[SerializeField] private DataBool Condition;
 
     [SerializeField] private List<DataBool> dataBools = new List<DataBool>();
     [SerializeField] private List<DataInt> dataInts = new List<DataInt>();
     [SerializeField] private List<DataFloat> dataFloats = new List<DataFloat>();
     [SerializeField] private List<DataVector2> dataVector2s = new List<DataVector2>();
-    
+
+
+    [Header("Neccesary Data")]
+    //public string MoveDirection;
+    public string MoveNode;
+    public string JumpNode;
+    public Vector2 Velocity;
+
+    public Vector2 previousMoveDir = Vector2.zero;
+    private RaycastHit2D slopeDetect;
     [Header("References")]
     [SerializeField] private Data data;
     [SerializeField] private DataInputController dataInputs;
@@ -27,11 +31,8 @@ public class Rigidbody2DVelocityFromData : MonoBehaviour
         data = GetComponent<Data>();
         RB2D = GetComponent<Rigidbody2D>();
 
-        //Condition = data.Bool(Condition);
-        //dataFloat = data.Float(dataFloat);
-        //dataDirection = data.Float(dataDirection);
 
-        for (int i = dataBools.Count - 1; i >= 0; i--)
+        /*for (int i = dataBools.Count - 1; i >= 0; i--)
         {
             dataBools[i] = data.GetBool(dataBools[i].Name);
         }
@@ -50,20 +51,14 @@ public class Rigidbody2DVelocityFromData : MonoBehaviour
         {
             dataVector2s[i] = data.GetVector2(dataVector2s[i].Name);
         }
+
+        dataFloats.Add(data.GetFloat(MoveDirection));*/
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
-    }
-
-    public void VerticalForceImpulse()
-    {
-        //Debug.Log(dataFloat.Name);
-        //RB2D.AddForce(new Vector2(RB2D.velocity.x, (float)dataFloats[0]), ForceMode2D.Impulse);
-        //RB2D.AddForce(new Vector2(RB2D.velocity.x, dataFloat.Value), ForceMode2D.Impulse);
-        
+        Velocity = RB2D.velocity;
     }
 
     public void VerticalForceImpulse(float value)
@@ -71,8 +66,8 @@ public class Rigidbody2DVelocityFromData : MonoBehaviour
         RB2D.velocity = new Vector2(RB2D.velocity.x, 0);
         //Vector2 temp = Vector2.zero;
 
-        RB2D.AddForce(new Vector2(RB2D.velocity.x, value), ForceMode2D.Impulse);
         //RB2D.velocity.Normalize();
+        RB2D.AddForce(new Vector2(0, value), ForceMode2D.Impulse);
     }
 
     public void VerticalJumpCutOff(float lowJumpMultiplier)
@@ -88,32 +83,69 @@ public class Rigidbody2DVelocityFromData : MonoBehaviour
         //Fall speed that accelerates based on parameter
         if (RB2D.velocity.y < 0)
         {
-            RB2D.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;        
+            RB2D.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         }
-    }
-
-    public void HorizontalMovement(string NodeName)
-    {
-        dataInputs.GetKey(NodeName);
-        //RB2D.velocity = new Vector2( (float)dataFloats[0] * (float)dataFloats[1], RB2D.velocity.y);
-        //RB2D.velocity = new Vector2(dataDirection.Value * dataFloat.Value, RB2D.velocity.y);
     }
 
     public void HorizontalMovement(float value)
     {
-        RB2D.velocity = new Vector2( value, RB2D.velocity.y);
+        RB2D.velocity = new Vector2(value, RB2D.velocity.y);
         //RB2D.velocity = new Vector2(dataDirection.Value * value, RB2D.velocity.y);
     }
 
-    public void VertalMovement(float value)
+    public void HorizontalVelocity(string MoveSpeed,/* string MoveNode, */string SlopeNode, /*string SlopeCheck, */string SlopeCheck)
     {
-        RB2D.velocity = new Vector2(RB2D.velocity.x,value);
-        //RB2D.velocity = new Vector2(dataDirection.Value * value, RB2D.velocity.y);
+        float PrevAngle = Vector2.Angle(previousMoveDir, Vector2.up);
+        float NewAngle = Vector2.Angle(data.GetVector2(SlopeNode).Value, Vector2.up);
+        //Debug.Log(NewAngle);
+        //Debug.Log(PrevAngle);
+        
+
+        if (data.GetFloat(JumpNode).Value <= 0 && data.GetBool(SlopeCheck).Value)
+        {
+            RB2D.velocity = new Vector2(data.GetInt(MoveSpeed).Value * data.GetVector2(SlopeNode).Value.x * -data.GetFloat(MoveNode).Value,
+                                        data.GetInt(MoveSpeed).Value * data.GetVector2(SlopeNode).Value.y * -data.GetFloat(MoveNode).Value);
+        }
+        else
+        {
+            RB2D.velocity = new Vector2(data.GetInt(MoveSpeed).Value * data.GetFloat(MoveNode).Value, RB2D.velocity.y);
+        }
+
+        if (data.GetFloat(MoveNode).Value == -1 && NewAngle > PrevAngle || data.GetFloat(MoveNode).Value == 1 && NewAngle < PrevAngle)
+        {
+            if(RB2D.velocity.y > 0 && data.GetFloat(JumpNode).Value <= 0)
+            {
+                RB2D.velocity = new Vector2(RB2D.velocity.x, RB2D.velocity.y * -1);
+            }
+        }
+        
+        Debug.DrawLine(RB2D.position, RB2D.position + RB2D.velocity.normalized, Color.green);
+
+        previousMoveDir = data.GetVector2(SlopeNode).Value;
+    }
+
+    public void VerticalMovement(float value)
+    {
+        RB2D.velocity = new Vector2(RB2D.velocity.x, value);
     }
 
     public void ResetVelocityX()
     {
+
         RB2D.velocity = new Vector2(0.0f, RB2D.velocity.y);
+
+    }
+
+    public void ResetVelocityX(string SlopeCheck)
+    {
+        if (data.GetBool(SlopeCheck) != null && data.GetBool(SlopeCheck).Value)
+        {
+            ResetVelocity();
+        }
+        else
+        {
+            RB2D.velocity = new Vector2(0.0f, RB2D.velocity.y);
+        }
     }
 
     public void ResetVelocityY()
