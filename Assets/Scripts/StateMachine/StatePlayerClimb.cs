@@ -51,33 +51,29 @@ public class StatePlayerClimb : State
 
     public void LimitJump(string Condition_)
     {
-        stateInputController.InputKeyBoolConditionLock("Jump", Condition_);
+        stateInputController.InputActionBoolConditionLock("Jump", Condition_);
     }
 
-    public void ClimbDownGroundCheck(string Condition_)
+    public void ClimbingGroundCheck(string Condition_, string ClimbingNode_)
     {
         //Ground check that uses 1 ray for detection
         float rayDistance = 0.3f;
 
-        if (RayCastGroundCheck(Feet.position, Vector2.down, rayDistance, GroundLayer))
+        if (data.GetFloat(ClimbingNode_).Value == 1)
         {
+            data.GetBool(Condition_).Value = !RayCastGroundCheck(Feet.position, Vector2.down, rayDistance, PlatformLayer);
             //if the ray return true then isClimbing is false
-            leaveLadder(Condition_);
+            //leaveLadder(Condition_);
+        }
+        else if (data.GetFloat(ClimbingNode_).Value == -1)
+        {
+            data.GetBool(Condition_).Value = !RayCastGroundCheck(Feet.position, Vector2.down, rayDistance, GroundLayer);
+            //if the ray return true then isClimbing is false
+            //leaveLadder(Condition_);
         }
     }
 
-    public void ClimbUpGroundCheck(string Condition_) {
-        //Ground check that uses 1 ray for detection
-        float rayDistance = 0.3f;
-
-        if (RayCastGroundCheck(Feet.position, Vector2.down, rayDistance, PlatformLayer))
-        {
-            //if the ray return true then isClimbing is false
-            leaveLadder(Condition_);          
-        }
-    }
-
-    public bool RayCastGroundCheck(Vector3 Position_, Vector2 Direction_, float Distance_, LayerMask CollisionLayer_)
+    private bool RayCastGroundCheck(Vector3 Position_, Vector2 Direction_, float Distance_, LayerMask CollisionLayer_)
     {
         RaycastHit2D rayHit = Physics2D.Raycast(Position_, Direction_, Distance_, CollisionLayer_);
         Debug.DrawRay(Position_, Direction_, Color.red);

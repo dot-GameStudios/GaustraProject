@@ -198,7 +198,7 @@ namespace UnityEditorInternal
 
 			BuildArgumentsField(pListener, argRect, m_DummyEvent);
 
-			var desiredTypes = new Type[arguments.arraySize];
+			var desiredTypes = new System.Type[arguments.arraySize];
 
 			for (int i = 0; i < arguments.arraySize; i++)
 			{
@@ -206,7 +206,7 @@ namespace UnityEditorInternal
 				var desiredArgTypeName = argument.FindPropertyRelative(kObjectArgumentAssemblyTypeName).stringValue;
 
 				if (!string.IsNullOrEmpty(desiredArgTypeName))
-					desiredTypes[i] = Type.GetType(desiredArgTypeName, false) ?? typeof(Object);
+					desiredTypes[i] = System.Type.GetType(desiredArgTypeName, false) ?? typeof(Object);
 				else
 					desiredTypes[i] = typeof(Object);
 			}
@@ -373,7 +373,7 @@ namespace UnityEditorInternal
 				return new UnityEvent2();
 
 			string propPath = prop.propertyPath;
-			Type ft = tgtobj.GetType();
+			System.Type ft = tgtobj.GetType();
 			while (propPath.Length != 0)
 			{
 				//we could have a leftover '.' if the previous iteration handled an array element
@@ -386,8 +386,12 @@ namespace UnityEditorInternal
 					break;
 
 				ft = newField.FieldType;
+
 				if (ft.IsArray)
 					ft = ft.GetElementType();
+
+				if (ft.IsGenericType && typeof(List<>) == ft.GetGenericTypeDefinition())
+					ft = ft.GetGenericArguments()[0];
 
 				//the last item in the property path could have been an array element
 				//bail early in that case
@@ -398,8 +402,10 @@ namespace UnityEditorInternal
 				if (propPath.StartsWith("Array.data["))
 					propPath = propPath.Split(new[] { ']' }, 2)[1];
 			}
+
 			if (ft.IsSubclassOf(typeof(UnityEventBase2)))
 				return Activator.CreateInstance(ft) as UnityEventBase2;
+
 			return new UnityEvent2();
 		}
 
@@ -461,7 +467,7 @@ namespace UnityEditorInternal
 		{
 			// figure out the signature of this delegate...
 			// The property at this stage points to the 'container' and has the field name
-			Type delegateType = dummyEvent.GetType();
+			System.Type delegateType = dummyEvent.GetType();
 
 			// check out the signature of invoke as this is the callback!
 			MethodInfo delegateMethod = delegateType.GetMethod("Invoke");
@@ -542,7 +548,7 @@ namespace UnityEditorInternal
 
 				if (modeEnum == PersistentListenerMode2.Enum)
 				{
-					Type enumType = Type.GetType(assembly.stringValue, false);
+					System.Type enumType = System.Type.GetType(assembly.stringValue, false);
 					string[] names = Enum.GetNames(enumType);
 
 					argument.intValue = EditorGUI.Popup(argRect, argument.intValue, names);
@@ -552,7 +558,7 @@ namespace UnityEditorInternal
 					//if (i < delegateArgumentsTypes.Length && arguments.arraySize > delegateArgumentsTypes.Length)
 					if (i < delegateArgumentsTypes.Length)
 					{
-						var type = Type.GetType(assembly.stringValue, false) ?? typeof(Object);
+						var type = System.Type.GetType(assembly.stringValue, false) ?? typeof(Object);
 
 						if (type == delegateArgumentsTypes[i])
 							EditorGUI.LabelField(argRect, "Dynamic " + GetTypeName(type));
@@ -610,7 +616,7 @@ namespace UnityEditorInternal
 					var desiredType = typeof(Object);
 
 					if (!string.IsNullOrEmpty(desiredArgTypeName))
-						desiredType = Type.GetType(desiredArgTypeName, false) ?? typeof(Object);
+						desiredType = System.Type.GetType(desiredArgTypeName, false) ?? typeof(Object);
 
 					EditorGUI.BeginChangeCheck();
 					var result = EditorGUI.ObjectField(argRect, GUIContent.none, argument.objectReferenceValue, desiredType, true);
@@ -648,7 +654,7 @@ namespace UnityEditorInternal
 
 			// figure out the signature of this delegate...
 			// The property at this stage points to the 'container' and has the field name
-			Type delegateType = dummyEvent.GetType();
+			System.Type delegateType = dummyEvent.GetType();
 
 			// check out the signature of invoke as this is the callback!
 			MethodInfo delegateMethod = delegateType.GetMethod("Invoke");
@@ -671,7 +677,7 @@ namespace UnityEditorInternal
 			return menu;
 		}
 
-		private void GeneratePopUpForType(GenericMenu menu, Object target, bool useFullTargetName, SerializedProperty listener, Type[] delegateArgumentsTypes)
+		private void GeneratePopUpForType(GenericMenu menu, Object target, bool useFullTargetName, SerializedProperty listener, System.Type[] delegateArgumentsTypes)
 		{
 			var methods = new List<ValidMethodMap>();
 			string targetName = useFullTargetName ? target.GetType().FullName : target.GetType().Name;
@@ -706,21 +712,21 @@ namespace UnityEditorInternal
 			}
 		}
 
-		private void GetMethodsForTargetAndMode(Object target, List<ValidMethodMap> methods, bool isDynamic = false, Type[] delegateArgumentsTypes = null)
+		private void GetMethodsForTargetAndMode(Object target, List<ValidMethodMap> methods, bool isDynamic = false, System.Type[] delegateArgumentsTypes = null)
 		{
 			IEnumerable<ValidMethodMap> newMethods = CalculateMethodMap(target, delegateArgumentsTypes, isDynamic);
 
 			methods.AddRange(newMethods);
 		}
 
-		private IEnumerable<ValidMethodMap> CalculateMethodMap(Object target, Type[] types, bool isDynamic)
+		private IEnumerable<ValidMethodMap> CalculateMethodMap(Object target, System.Type[] types, bool isDynamic)
 		{
 			var validMethods = new List<ValidMethodMap>();
 			if (target == null || (isDynamic && types == null))
 				return validMethods;
 
 			// find the methods on the behaviour that match the signature
-			Type componentType = target.GetType();
+			System.Type componentType = target.GetType();
 			var componentMethods = componentType.GetMethods().Where(x => !x.IsSpecialName).ToList();
 
 			var wantedProperties = componentType.GetProperties().AsEnumerable();
@@ -797,7 +803,7 @@ namespace UnityEditorInternal
 			return validMethods;
 		}
 
-		public bool IsListenerValid(Object uObject, string methodName, Type[] argumentTypes)
+		public bool IsListenerValid(Object uObject, string methodName, System.Type[] argumentTypes)
 		{
 			if (uObject == null || string.IsNullOrEmpty(methodName))
 				return false;
@@ -840,7 +846,7 @@ namespace UnityEditorInternal
 			return false;
 		}
 
-		private void AddMethodsToMenu(GenericMenu menu, SerializedProperty listener, List<ValidMethodMap> methods, string targetName, Type[] delegateArgumentsTypes = null)
+		private void AddMethodsToMenu(GenericMenu menu, SerializedProperty listener, List<ValidMethodMap> methods, string targetName, System.Type[] delegateArgumentsTypes = null)
 		{
 			// Note: sorting by a bool in OrderBy doesn't seem to work for some reason, so using numbers explicitly.
 			IEnumerable<ValidMethodMap> orderedMethods = methods.OrderBy(e => e.methodInfo.Name.StartsWith("set_") ? 0 : 1).ThenBy(e => e.methodInfo.Name);
@@ -848,7 +854,7 @@ namespace UnityEditorInternal
 				AddFunctionsForScript(menu, listener, validMethod, targetName, delegateArgumentsTypes);
 		}
 
-		private void AddFunctionsForScript(GenericMenu menu, SerializedProperty listener, ValidMethodMap method, string targetName, Type[] delegateArgumentsTypes)
+		private void AddFunctionsForScript(GenericMenu menu, SerializedProperty listener, ValidMethodMap method, string targetName, System.Type[] delegateArgumentsTypes)
 		{
 			// find the current event target...
 			var listenerTarget = listener.FindPropertyRelative(kInstancePath).objectReferenceValue;
@@ -905,7 +911,7 @@ namespace UnityEditorInternal
 			return (PersistentListenerMode2)mode.enumValueIndex;
 		}
 
-		private PersistentListenerMode2 GetMode(Type type)
+		private PersistentListenerMode2 GetMode(System.Type type)
 		{
 			if (type == typeof(int))
 				return PersistentListenerMode2.Int;
@@ -952,7 +958,7 @@ namespace UnityEditorInternal
 			return modes;
 		}
 
-		private string GetTypeName(Type t)
+		private string GetTypeName(System.Type t)
 		{
 			if (t == typeof(int))
 				return "int";
@@ -965,7 +971,7 @@ namespace UnityEditorInternal
 			return t.Name;
 		}
 
-		private string GetFormattedMethodName(string targetName, MethodInfo method, string args, bool dynamic, Type[] delegateArgumentsTypes)
+		private string GetFormattedMethodName(string targetName, MethodInfo method, string args, bool dynamic, System.Type[] delegateArgumentsTypes)
 		{
 			if (dynamic)
 			{
@@ -1012,14 +1018,14 @@ namespace UnityEditorInternal
 
 		private MethodInfo GetMethodInfo(SerializedProperty listenerTarget, SerializedProperty methodName, SerializedProperty arguments)
 		{
-			var desiredTypes = new Type[arguments.arraySize];
+			var desiredTypes = new System.Type[arguments.arraySize];
 			for (int i = 0; i < arguments.arraySize; i++)
 			{
 				var argument = arguments.GetArrayElementAtIndex(i);
 				var desiredArgTypeName = argument.FindPropertyRelative(kObjectArgumentAssemblyTypeName).stringValue;
 
 				if (!string.IsNullOrEmpty(desiredArgTypeName))
-					desiredTypes[i] = Type.GetType(desiredArgTypeName, false) ?? typeof(Object);
+					desiredTypes[i] = System.Type.GetType(desiredArgTypeName, false) ?? typeof(Object);
 				else
 					desiredTypes[i] = typeof(Object);
 			}
@@ -1027,7 +1033,7 @@ namespace UnityEditorInternal
 			return UnityEventBase2.GetValidMethodInfo(listenerTarget.objectReferenceValue, methodName.stringValue, desiredTypes);
 		}
 
-		private static T GetAttribute<T>(MemberInfo memberInfo, Type attributeType, bool inherit)
+		private static T GetAttribute<T>(MemberInfo memberInfo, System.Type attributeType, bool inherit)
 		{
 			if (memberInfo != null)
 			{
@@ -1040,7 +1046,7 @@ namespace UnityEditorInternal
 			return default(T);
 		}
 
-		private static T GetAttribute<T>(ParameterInfo parameterInfo, Type attributeType, bool inherit)
+		private static T GetAttribute<T>(ParameterInfo parameterInfo, System.Type attributeType, bool inherit)
 		{
 			if (parameterInfo != null)
 			{
@@ -1137,7 +1143,7 @@ namespace UnityEditorInternal
 							argument.FindPropertyRelative(kIntArgument).intValue = defaultValue;
 							break;
 						case PersistentListenerMode2.Float:
-							argument.FindPropertyRelative(kFloatArgument).floatValue = 0;
+							argument.FindPropertyRelative(kFloatArgument).floatValue = 0f;
 							break;
 						case PersistentListenerMode2.String:
 							argument.FindPropertyRelative(kStringArgument).stringValue = null;

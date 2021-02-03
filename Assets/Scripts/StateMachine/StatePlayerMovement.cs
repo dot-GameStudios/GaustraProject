@@ -12,7 +12,7 @@ public class StatePlayerMovement : State
     public GameObject rayPosLeft;
     public GameObject rayPosRight;
     public GameObject playerFeet;
-    
+
     private Vector2 slopeNormalPerp;
     private float slopeDownAngle;
 
@@ -30,12 +30,12 @@ public class StatePlayerMovement : State
 
 
     public void GetData()
-    {   
+    {
         RigidBody = GetComponent<Rigidbody2D>();
         RB2DTrigger = GetComponent<Rigidbody2DTrigger>();
         MovementInput = data.GetFloat(MovementInputNode);
     }
- 
+
     public void GroundCheck(float rayDistance, string Condition_)
     {
         //Ground check that uses 2 rays for detection     
@@ -47,11 +47,10 @@ public class StatePlayerMovement : State
         slopeNormalPerp = Vector2.Perpendicular(feetHit.normal).normalized;
         slopeDownAngle = Vector2.Angle(feetHit.normal, Vector2.up);
 
-        Debug.DrawLine(playerFeet.transform.position, playerFeet.transform.position + Vector3.down* rayDistance, Color.red);
-        
-        Debug.DrawLine(rayPosRight.transform.position, rayPosRight.transform.position + Vector3.down * rayDistance,Color.red);
+        Debug.DrawLine(playerFeet.transform.position, playerFeet.transform.position + Vector3.down * rayDistance, Color.red);
+
+        Debug.DrawLine(rayPosRight.transform.position, rayPosRight.transform.position + Vector3.down * rayDistance, Color.red);
         Debug.DrawLine(rayPosLeft.transform.position, rayPosLeft.transform.position + Vector3.down * rayDistance, Color.red);
-        
 
         Debug.DrawLine(feetHit.point, feetHit.point + slopeNormalPerp, Color.yellow);
 
@@ -60,7 +59,7 @@ public class StatePlayerMovement : State
             if (slopeDownAngle != 0)
             {
                 SetBoolNode("IsOnSlope", true);
-                if(MovementInput.Value == 0)
+                if (MovementInput.Value == 0)
                 {
                     SetPhysicsMaterial2D(SlopeFriction);
                 }
@@ -68,13 +67,12 @@ public class StatePlayerMovement : State
             else
             {
                 SetBoolNode("IsOnSlope", false);
-
             }
             SetVector2Node("SlopeDirection", slopeNormalPerp);
             //otherwise Grounded is true
             SetBoolNode(Condition_, true);
-            stateInputController.InputKeyBoolConditionLock("Jump", Condition_);
-            
+            stateInputController.InputActionBoolConditionLock("Jump", Condition_);
+
         }
         else
         {
@@ -83,7 +81,7 @@ public class StatePlayerMovement : State
             SetBoolNode("IsOnSlope", false);
         }
 
-        
+
     }
 
     public void SetPhysicsMaterial2D(PhysicsMaterial2D newMaterial)
@@ -109,10 +107,11 @@ public class StatePlayerMovement : State
 
     public void LimitJump(string Condition_)
     {
-        stateInputController.InputKeyBoolConditionLock("Jump", Condition_);
+        stateInputController.InputActionBoolConditionLock("Jump", Condition_);
     }
 
-    public void Dodge(float speed) {
+    public void Dodge(float speed)
+    {
         float DodgeSpeed = speed;
         Vector2 DodgeDirection = Vector2.zero;
 
@@ -159,7 +158,7 @@ public class StatePlayerMovement : State
         if (RB2DTrigger.ColliderTag == "Ladder")
         {
             ChangeRigidBodyType("Kinematic");
-            SetBoolNode(Condition_, true);   
+            SetBoolNode(Condition_, true);
         }
     }
 
@@ -194,14 +193,14 @@ public class StatePlayerMovement : State
     }
 
     public void SetLayer(string layerName)
-    {       
+    {
         //Sets the gameObject's layer to the string given
         gameObject.layer = LayerMask.NameToLayer(layerName);
     }
 
     public void ResetLayer(float time)
     {
-        StartCoroutine(CountDown(time));   
+        StartCoroutine(CountDown(time));
     }
 
     public void GetCheckPoint()
@@ -214,8 +213,8 @@ public class StatePlayerMovement : State
 
     IEnumerator CountDown(float time)
     {
-        float duration = time; 
-        
+        float duration = time;
+
         while (duration >= 0)
         {
             duration -= Time.deltaTime;

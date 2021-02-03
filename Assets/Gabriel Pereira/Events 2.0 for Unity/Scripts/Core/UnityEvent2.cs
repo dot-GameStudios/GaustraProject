@@ -366,7 +366,7 @@ namespace UnityEngine.Events
 		public abstract bool Find(object targetObj, MethodInfo method);
 	}
 
-	class InvokableCall2 : BaseInvokableCall2
+	public class InvokableCall2 : BaseInvokableCall2
 	{
 		private event UnityAction Delegate;
 
@@ -398,16 +398,16 @@ namespace UnityEngine.Events
 		}
 	}
 
-	class InvokableCall2<T1> : BaseInvokableCall2
+	public class InvokableCall2<T0> : BaseInvokableCall2
 	{
-		protected event UnityAction<T1> Delegate;
+		protected event UnityAction<T0> Delegate;
 
 		public InvokableCall2(object target, MethodInfo theFunction) : base(target, theFunction)
 		{
-			Delegate += (UnityAction<T1>)System.Delegate.CreateDelegate(typeof(UnityAction<T1>), target, theFunction);
+			Delegate += (UnityAction<T0>)System.Delegate.CreateDelegate(typeof(UnityAction<T0>), target, theFunction);
 		}
 
-		public InvokableCall2(UnityAction<T1> action)
+		public InvokableCall2(UnityAction<T0> action)
 		{
 			Delegate += action;
 		}
@@ -416,13 +416,13 @@ namespace UnityEngine.Events
 		{
 			if (args.Length != 1)
 				throw new ArgumentException("Passed argument 'args' is invalid size. Expected size is 1");
-			ThrowOnInvalidArg<T1>(args[0], methodName, targetAssembly);
+			ThrowOnInvalidArg<T0>(args[0], methodName, targetAssembly);
 			if (!AllowInvoke(Delegate))
 				return;
-			Delegate((T1)args[0]);
+			Delegate((T0)args[0]);
 		}
 
-		public virtual void Invoke(T1 args0)
+		public virtual void Invoke(T0 args0)
 		{
 			if (AllowInvoke(Delegate))
 				Delegate(args0);
@@ -434,16 +434,16 @@ namespace UnityEngine.Events
 		}
 	}
 
-	class InvokableCall2<T1, T2> : BaseInvokableCall2
+	public class InvokableCall2<T0, T1> : BaseInvokableCall2
 	{
-		protected event UnityAction<T1, T2> Delegate;
+		protected event UnityAction<T0, T1> Delegate;
 
 		public InvokableCall2(object target, MethodInfo theFunction) : base(target, theFunction)
 		{
-			Delegate += (UnityAction<T1, T2>)System.Delegate.CreateDelegate(typeof(UnityAction<T1, T2>), target, theFunction);
+			Delegate += (UnityAction<T0, T1>)System.Delegate.CreateDelegate(typeof(UnityAction<T0, T1>), target, theFunction);
 		}
 
-		public InvokableCall2(UnityAction<T1, T2> action)
+		public InvokableCall2(UnityAction<T0, T1> action)
 		{
 			Delegate += action;
 		}
@@ -452,14 +452,14 @@ namespace UnityEngine.Events
 		{
 			if (args.Length != 2)
 				throw new ArgumentException("Passed argument 'args' is invalid size. Expected size is 2");
-			ThrowOnInvalidArg<T1>(args[0], methodName, targetAssembly);
-			ThrowOnInvalidArg<T2>(args[1], methodName, targetAssembly);
+			ThrowOnInvalidArg<T0>(args[0], methodName, targetAssembly);
+			ThrowOnInvalidArg<T1>(args[1], methodName, targetAssembly);
 			if (!AllowInvoke(Delegate))
 				return;
-			Delegate((T1)args[0], (T2)args[1]);
+			Delegate((T0)args[0], (T1)args[1]);
 		}
 
-		public void Invoke(T1 args0, T2 args1)
+		public virtual void Invoke(T0 args0, T1 args1)
 		{
 			if (AllowInvoke(Delegate))
 				Delegate(args0, args1);
@@ -471,16 +471,16 @@ namespace UnityEngine.Events
 		}
 	}
 
-	class InvokableCall2<T1, T2, T3> : BaseInvokableCall2
+	public class InvokableCall2<T0, T1, T2> : BaseInvokableCall2
 	{
-		protected event UnityAction<T1, T2, T3> Delegate;
+		protected event UnityAction<T0, T1, T2> Delegate;
 
 		public InvokableCall2(object target, MethodInfo theFunction) : base(target, theFunction)
 		{
-			Delegate += (UnityAction<T1, T2, T3>)System.Delegate.CreateDelegate(typeof(UnityAction<T1, T2, T3>), target, theFunction);
+			Delegate += (UnityAction<T0, T1, T2>)System.Delegate.CreateDelegate(typeof(UnityAction<T0, T1, T2>), target, theFunction);
 		}
 
-		public InvokableCall2(UnityAction<T1, T2, T3> action)
+		public InvokableCall2(UnityAction<T0, T1, T2> action)
 		{
 			Delegate += action;
 		}
@@ -489,15 +489,15 @@ namespace UnityEngine.Events
 		{
 			if (args.Length != 3)
 				throw new ArgumentException("Passed argument 'args' is invalid size. Expected size is 3");
-			ThrowOnInvalidArg<T1>(args[0], methodName, targetAssembly);
-			ThrowOnInvalidArg<T2>(args[1], methodName, targetAssembly);
-			ThrowOnInvalidArg<T3>(args[2], methodName, targetAssembly);
+			ThrowOnInvalidArg<T0>(args[0], methodName, targetAssembly);
+			ThrowOnInvalidArg<T1>(args[1], methodName, targetAssembly);
+			ThrowOnInvalidArg<T2>(args[2], methodName, targetAssembly);
 			if (!AllowInvoke(Delegate))
 				return;
-			Delegate((T1)args[0], (T2)args[1], (T3)args[2]);
+			Delegate((T0)args[0], (T1)args[1], (T2)args[2]);
 		}
 
-		public void Invoke(T1 args0, T2 args1, T3 args2)
+		public virtual void Invoke(T0 args0, T1 args1, T2 args2)
 		{
 			if (AllowInvoke(Delegate))
 				Delegate(args0, args1, args2);
@@ -509,16 +509,16 @@ namespace UnityEngine.Events
 		}
 	}
 
-	class InvokableCall2<T1, T2, T3, T4> : BaseInvokableCall2
+	public class InvokableCall2<T0, T1, T2, T3> : BaseInvokableCall2
 	{
-		protected event UnityAction<T1, T2, T3, T4> Delegate;
+		protected event UnityAction<T0, T1, T2, T3> Delegate;
 
 		public InvokableCall2(object target, MethodInfo theFunction) : base(target, theFunction)
 		{
-			Delegate += (UnityAction<T1, T2, T3, T4>)System.Delegate.CreateDelegate(typeof(UnityAction<T1, T2, T3, T4>), target, theFunction);
+			Delegate += (UnityAction<T0, T1, T2, T3>)System.Delegate.CreateDelegate(typeof(UnityAction<T0, T1, T2, T3>), target, theFunction);
 		}
 
-		public InvokableCall2(UnityAction<T1, T2, T3, T4> action)
+		public InvokableCall2(UnityAction<T0, T1, T2, T3> action)
 		{
 			Delegate += action;
 		}
@@ -527,16 +527,16 @@ namespace UnityEngine.Events
 		{
 			if (args.Length != 4)
 				throw new ArgumentException("Passed argument 'args' is invalid size. Expected size is 4");
-			ThrowOnInvalidArg<T1>(args[0], methodName, targetAssembly);
-			ThrowOnInvalidArg<T2>(args[1], methodName, targetAssembly);
-			ThrowOnInvalidArg<T3>(args[2], methodName, targetAssembly);
-			ThrowOnInvalidArg<T4>(args[3], methodName, targetAssembly);
+			ThrowOnInvalidArg<T0>(args[0], methodName, targetAssembly);
+			ThrowOnInvalidArg<T1>(args[1], methodName, targetAssembly);
+			ThrowOnInvalidArg<T2>(args[2], methodName, targetAssembly);
+			ThrowOnInvalidArg<T3>(args[3], methodName, targetAssembly);
 			if (!AllowInvoke(Delegate))
 				return;
-			Delegate((T1)args[0], (T2)args[1], (T3)args[2], (T4)args[3]);
+			Delegate((T0)args[0], (T1)args[1], (T2)args[2], (T3)args[3]);
 		}
 
-		public void Invoke(T1 args0, T2 args1, T3 args2, T4 args3)
+		public virtual void Invoke(T0 args0, T1 args1, T2 args2, T3 args3)
 		{
 			if (AllowInvoke(Delegate))
 				Delegate(args0, args1, args2, args3);
@@ -548,16 +548,16 @@ namespace UnityEngine.Events
 		}
 	}
 
-	class InvokableCall2<T1, T2, T3, T4, T5> : BaseInvokableCall2
+	public class InvokableCall2<T0, T1, T2, T3, T4> : BaseInvokableCall2
 	{
-		protected event UnityAction<T1, T2, T3, T4, T5> Delegate;
+		protected event UnityAction<T0, T1, T2, T3, T4> Delegate;
 
 		public InvokableCall2(object target, MethodInfo theFunction) : base(target, theFunction)
 		{
-			Delegate += (UnityAction<T1, T2, T3, T4, T5>)System.Delegate.CreateDelegate(typeof(UnityAction<T1, T2, T3, T4, T5>), target, theFunction);
+			Delegate += (UnityAction<T0, T1, T2, T3, T4>)System.Delegate.CreateDelegate(typeof(UnityAction<T0, T1, T2, T3, T4>), target, theFunction);
 		}
 
-		public InvokableCall2(UnityAction<T1, T2, T3, T4, T5> action)
+		public InvokableCall2(UnityAction<T0, T1, T2, T3, T4> action)
 		{
 			Delegate += action;
 		}
@@ -566,17 +566,17 @@ namespace UnityEngine.Events
 		{
 			if (args.Length != 5)
 				throw new ArgumentException("Passed argument 'args' is invalid size. Expected size is 5");
-			ThrowOnInvalidArg<T1>(args[0], methodName, targetAssembly);
-			ThrowOnInvalidArg<T2>(args[1], methodName, targetAssembly);
-			ThrowOnInvalidArg<T3>(args[2], methodName, targetAssembly);
-			ThrowOnInvalidArg<T4>(args[3], methodName, targetAssembly);
-			ThrowOnInvalidArg<T5>(args[4], methodName, targetAssembly);
+			ThrowOnInvalidArg<T0>(args[0], methodName, targetAssembly);
+			ThrowOnInvalidArg<T1>(args[1], methodName, targetAssembly);
+			ThrowOnInvalidArg<T2>(args[2], methodName, targetAssembly);
+			ThrowOnInvalidArg<T3>(args[3], methodName, targetAssembly);
+			ThrowOnInvalidArg<T4>(args[4], methodName, targetAssembly);
 			if (!AllowInvoke(Delegate))
 				return;
-			Delegate((T1)args[0], (T2)args[1], (T3)args[2], (T4)args[3], (T5)args[4]);
+			Delegate((T0)args[0], (T1)args[1], (T2)args[2], (T3)args[3], (T4)args[4]);
 		}
 
-		public void Invoke(T1 args0, T2 args1, T3 args2, T4 args3, T5 args4)
+		public virtual void Invoke(T0 args0, T1 args1, T2 args2, T3 args3, T4 args4)
 		{
 			if (AllowInvoke(Delegate))
 				Delegate(args0, args1, args2, args3, args4);
@@ -588,16 +588,16 @@ namespace UnityEngine.Events
 		}
 	}
 
-	class InvokableCall2<T1, T2, T3, T4, T5, T6> : BaseInvokableCall2
+	public class InvokableCall2<T0, T1, T2, T3, T4, T5> : BaseInvokableCall2
 	{
-		protected event UnityAction<T1, T2, T3, T4, T5, T6> Delegate;
+		protected event UnityAction<T0, T1, T2, T3, T4, T5> Delegate;
 
 		public InvokableCall2(object target, MethodInfo theFunction) : base(target, theFunction)
 		{
-			Delegate += (UnityAction<T1, T2, T3, T4, T5, T6>)System.Delegate.CreateDelegate(typeof(UnityAction<T1, T2, T3, T4, T5, T6>), target, theFunction);
+			Delegate += (UnityAction<T0, T1, T2, T3, T4, T5>)System.Delegate.CreateDelegate(typeof(UnityAction<T0, T1, T2, T3, T4, T5>), target, theFunction);
 		}
 
-		public InvokableCall2(UnityAction<T1, T2, T3, T4, T5, T6> action)
+		public InvokableCall2(UnityAction<T0, T1, T2, T3, T4, T5> action)
 		{
 			Delegate += action;
 		}
@@ -606,18 +606,18 @@ namespace UnityEngine.Events
 		{
 			if (args.Length != 6)
 				throw new ArgumentException("Passed argument 'args' is invalid size. Expected size is 6");
-			ThrowOnInvalidArg<T1>(args[0], methodName, targetAssembly);
-			ThrowOnInvalidArg<T2>(args[1], methodName, targetAssembly);
-			ThrowOnInvalidArg<T3>(args[2], methodName, targetAssembly);
-			ThrowOnInvalidArg<T4>(args[3], methodName, targetAssembly);
-			ThrowOnInvalidArg<T5>(args[4], methodName, targetAssembly);
-			ThrowOnInvalidArg<T6>(args[5], methodName, targetAssembly);
+			ThrowOnInvalidArg<T0>(args[0], methodName, targetAssembly);
+			ThrowOnInvalidArg<T1>(args[1], methodName, targetAssembly);
+			ThrowOnInvalidArg<T2>(args[2], methodName, targetAssembly);
+			ThrowOnInvalidArg<T3>(args[3], methodName, targetAssembly);
+			ThrowOnInvalidArg<T4>(args[4], methodName, targetAssembly);
+			ThrowOnInvalidArg<T5>(args[5], methodName, targetAssembly);
 			if (!AllowInvoke(Delegate))
 				return;
-			Delegate((T1)args[0], (T2)args[1], (T3)args[2], (T4)args[3], (T5)args[4], (T6)args[5]);
+			Delegate((T0)args[0], (T1)args[1], (T2)args[2], (T3)args[3], (T4)args[4], (T5)args[5]);
 		}
 
-		public void Invoke(T1 args0, T2 args1, T3 args2, T4 args3, T5 args4, T6 args5)
+		public virtual void Invoke(T0 args0, T1 args1, T2 args2, T3 args3, T4 args4, T5 args5)
 		{
 			if (AllowInvoke(Delegate))
 				Delegate(args0, args1, args2, args3, args4, args5);
@@ -629,16 +629,16 @@ namespace UnityEngine.Events
 		}
 	}
 
-	class InvokableCall2<T1, T2, T3, T4, T5, T6, T7> : BaseInvokableCall2
+	public class InvokableCall2<T0, T1, T2, T3, T4, T5, T6> : BaseInvokableCall2
 	{
-		protected event UnityAction<T1, T2, T3, T4, T5, T6, T7> Delegate;
+		protected event UnityAction<T0, T1, T2, T3, T4, T5, T6> Delegate;
 
 		public InvokableCall2(object target, MethodInfo theFunction) : base(target, theFunction)
 		{
-			Delegate += (UnityAction<T1, T2, T3, T4, T5, T6, T7>)System.Delegate.CreateDelegate(typeof(UnityAction<T1, T2, T3, T4, T5, T6, T7>), target, theFunction);
+			Delegate += (UnityAction<T0, T1, T2, T3, T4, T5, T6>)System.Delegate.CreateDelegate(typeof(UnityAction<T0, T1, T2, T3, T4, T5, T6>), target, theFunction);
 		}
 
-		public InvokableCall2(UnityAction<T1, T2, T3, T4, T5, T6, T7> action)
+		public InvokableCall2(UnityAction<T0, T1, T2, T3, T4, T5, T6> action)
 		{
 			Delegate += action;
 		}
@@ -647,19 +647,19 @@ namespace UnityEngine.Events
 		{
 			if (args.Length != 7)
 				throw new ArgumentException("Passed argument 'args' is invalid size. Expected size is 7");
-			ThrowOnInvalidArg<T1>(args[0], methodName, targetAssembly);
-			ThrowOnInvalidArg<T2>(args[1], methodName, targetAssembly);
-			ThrowOnInvalidArg<T3>(args[2], methodName, targetAssembly);
-			ThrowOnInvalidArg<T4>(args[3], methodName, targetAssembly);
-			ThrowOnInvalidArg<T5>(args[4], methodName, targetAssembly);
-			ThrowOnInvalidArg<T6>(args[5], methodName, targetAssembly);
-			ThrowOnInvalidArg<T7>(args[6], methodName, targetAssembly);
+			ThrowOnInvalidArg<T0>(args[0], methodName, targetAssembly);
+			ThrowOnInvalidArg<T1>(args[1], methodName, targetAssembly);
+			ThrowOnInvalidArg<T2>(args[2], methodName, targetAssembly);
+			ThrowOnInvalidArg<T3>(args[3], methodName, targetAssembly);
+			ThrowOnInvalidArg<T4>(args[4], methodName, targetAssembly);
+			ThrowOnInvalidArg<T5>(args[5], methodName, targetAssembly);
+			ThrowOnInvalidArg<T6>(args[6], methodName, targetAssembly);
 			if (!AllowInvoke(Delegate))
 				return;
-			Delegate((T1)args[0], (T2)args[1], (T3)args[2], (T4)args[3], (T5)args[4], (T6)args[5], (T7)args[6]);
+			Delegate((T0)args[0], (T1)args[1], (T2)args[2], (T3)args[3], (T4)args[4], (T5)args[5], (T6)args[6]);
 		}
 
-		public void Invoke(T1 args0, T2 args1, T3 args2, T4 args3, T5 args4, T6 args5, T7 args6)
+		public virtual void Invoke(T0 args0, T1 args1, T2 args2, T3 args3, T4 args4, T5 args5, T6 args6)
 		{
 			if (AllowInvoke(Delegate))
 				Delegate(args0, args1, args2, args3, args4, args5, args6);
@@ -671,16 +671,16 @@ namespace UnityEngine.Events
 		}
 	}
 
-	class InvokableCall2<T1, T2, T3, T4, T5, T6, T7, T8> : BaseInvokableCall2
+	public class InvokableCall2<T0, T1, T2, T3, T4, T5, T6, T7> : BaseInvokableCall2
 	{
-		protected event UnityAction<T1, T2, T3, T4, T5, T6, T7, T8> Delegate;
+		protected event UnityAction<T0, T1, T2, T3, T4, T5, T6, T7> Delegate;
 
 		public InvokableCall2(object target, MethodInfo theFunction) : base(target, theFunction)
 		{
-			Delegate += (UnityAction<T1, T2, T3, T4, T5, T6, T7, T8>)System.Delegate.CreateDelegate(typeof(UnityAction<T1, T2, T3, T4, T5, T6, T7, T8>), target, theFunction);
+			Delegate += (UnityAction<T0, T1, T2, T3, T4, T5, T6, T7>)System.Delegate.CreateDelegate(typeof(UnityAction<T0, T1, T2, T3, T4, T5, T6, T7>), target, theFunction);
 		}
 
-		public InvokableCall2(UnityAction<T1, T2, T3, T4, T5, T6, T7, T8> action)
+		public InvokableCall2(UnityAction<T0, T1, T2, T3, T4, T5, T6, T7> action)
 		{
 			Delegate += action;
 		}
@@ -689,20 +689,20 @@ namespace UnityEngine.Events
 		{
 			if (args.Length != 8)
 				throw new ArgumentException("Passed argument 'args' is invalid size. Expected size is 8");
-			ThrowOnInvalidArg<T1>(args[0], methodName, targetAssembly);
-			ThrowOnInvalidArg<T2>(args[1], methodName, targetAssembly);
-			ThrowOnInvalidArg<T3>(args[2], methodName, targetAssembly);
-			ThrowOnInvalidArg<T4>(args[3], methodName, targetAssembly);
-			ThrowOnInvalidArg<T5>(args[4], methodName, targetAssembly);
-			ThrowOnInvalidArg<T6>(args[5], methodName, targetAssembly);
-			ThrowOnInvalidArg<T7>(args[6], methodName, targetAssembly);
-			ThrowOnInvalidArg<T8>(args[7], methodName, targetAssembly);
+			ThrowOnInvalidArg<T0>(args[0], methodName, targetAssembly);
+			ThrowOnInvalidArg<T1>(args[1], methodName, targetAssembly);
+			ThrowOnInvalidArg<T2>(args[2], methodName, targetAssembly);
+			ThrowOnInvalidArg<T3>(args[3], methodName, targetAssembly);
+			ThrowOnInvalidArg<T4>(args[4], methodName, targetAssembly);
+			ThrowOnInvalidArg<T5>(args[5], methodName, targetAssembly);
+			ThrowOnInvalidArg<T6>(args[6], methodName, targetAssembly);
+			ThrowOnInvalidArg<T7>(args[7], methodName, targetAssembly);
 			if (!AllowInvoke(Delegate))
 				return;
-			Delegate((T1)args[0], (T2)args[1], (T3)args[2], (T4)args[3], (T5)args[4], (T6)args[5], (T7)args[6], (T8)args[7]);
+			Delegate((T0)args[0], (T1)args[1], (T2)args[2], (T3)args[3], (T4)args[4], (T5)args[5], (T6)args[6], (T7)args[7]);
 		}
 
-		public void Invoke(T1 args0, T2 args1, T3 args2, T4 args3, T5 args4, T6 args5, T7 args6, T8 args7)
+		public virtual void Invoke(T0 args0, T1 args1, T2 args2, T3 args3, T4 args4, T5 args5, T6 args6, T7 args7)
 		{
 			if (AllowInvoke(Delegate))
 				Delegate(args0, args1, args2, args3, args4, args5, args6, args7);
@@ -714,16 +714,16 @@ namespace UnityEngine.Events
 		}
 	}
 
-	class InvokableCall2<T1, T2, T3, T4, T5, T6, T7, T8, T9> : BaseInvokableCall2
+	public class InvokableCall2<T0, T1, T2, T3, T4, T5, T6, T7, T8> : BaseInvokableCall2
 	{
-		protected event UnityAction<T1, T2, T3, T4, T5, T6, T7, T8, T9> Delegate;
+		protected event UnityAction<T0, T1, T2, T3, T4, T5, T6, T7, T8> Delegate;
 
 		public InvokableCall2(object target, MethodInfo theFunction) : base(target, theFunction)
 		{
-			Delegate += (UnityAction<T1, T2, T3, T4, T5, T6, T7, T8, T9>)System.Delegate.CreateDelegate(typeof(UnityAction<T1, T2, T3, T4, T5, T6, T7, T8, T9>), target, theFunction);
+			Delegate += (UnityAction<T0, T1, T2, T3, T4, T5, T6, T7, T8>)System.Delegate.CreateDelegate(typeof(UnityAction<T0, T1, T2, T3, T4, T5, T6, T7, T8>), target, theFunction);
 		}
 
-		public InvokableCall2(UnityAction<T1, T2, T3, T4, T5, T6, T7, T8, T9> action)
+		public InvokableCall2(UnityAction<T0, T1, T2, T3, T4, T5, T6, T7, T8> action)
 		{
 			Delegate += action;
 		}
@@ -732,21 +732,21 @@ namespace UnityEngine.Events
 		{
 			if (args.Length != 9)
 				throw new ArgumentException("Passed argument 'args' is invalid size. Expected size is 9");
-			ThrowOnInvalidArg<T1>(args[0], methodName, targetAssembly);
-			ThrowOnInvalidArg<T2>(args[1], methodName, targetAssembly);
-			ThrowOnInvalidArg<T3>(args[2], methodName, targetAssembly);
-			ThrowOnInvalidArg<T4>(args[3], methodName, targetAssembly);
-			ThrowOnInvalidArg<T5>(args[4], methodName, targetAssembly);
-			ThrowOnInvalidArg<T6>(args[5], methodName, targetAssembly);
-			ThrowOnInvalidArg<T7>(args[6], methodName, targetAssembly);
-			ThrowOnInvalidArg<T8>(args[7], methodName, targetAssembly);
-			ThrowOnInvalidArg<T9>(args[8], methodName, targetAssembly);
+			ThrowOnInvalidArg<T0>(args[0], methodName, targetAssembly);
+			ThrowOnInvalidArg<T1>(args[1], methodName, targetAssembly);
+			ThrowOnInvalidArg<T2>(args[2], methodName, targetAssembly);
+			ThrowOnInvalidArg<T3>(args[3], methodName, targetAssembly);
+			ThrowOnInvalidArg<T4>(args[4], methodName, targetAssembly);
+			ThrowOnInvalidArg<T5>(args[5], methodName, targetAssembly);
+			ThrowOnInvalidArg<T6>(args[6], methodName, targetAssembly);
+			ThrowOnInvalidArg<T7>(args[7], methodName, targetAssembly);
+			ThrowOnInvalidArg<T8>(args[8], methodName, targetAssembly);
 			if (!AllowInvoke(Delegate))
 				return;
-			Delegate((T1)args[0], (T2)args[1], (T3)args[2], (T4)args[3], (T5)args[4], (T6)args[5], (T7)args[6], (T8)args[7], (T9)args[8]);
+			Delegate((T0)args[0], (T1)args[1], (T2)args[2], (T3)args[3], (T4)args[4], (T5)args[5], (T6)args[6], (T7)args[7], (T8)args[8]);
 		}
 
-		public void Invoke(T1 args0, T2 args1, T3 args2, T4 args3, T5 args4, T6 args5, T7 args6, T8 args7, T9 args8)
+		public virtual void Invoke(T0 args0, T1 args1, T2 args2, T3 args3, T4 args4, T5 args5, T6 args6, T7 args7, T8 args8)
 		{
 			if (AllowInvoke(Delegate))
 				Delegate(args0, args1, args2, args3, args4, args5, args6, args7, args8);
@@ -758,16 +758,16 @@ namespace UnityEngine.Events
 		}
 	}
 
-	class InvokableCall2<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10> : BaseInvokableCall2
+	public class InvokableCall2<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9> : BaseInvokableCall2
 	{
-		protected event UnityAction<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10> Delegate;
+		protected event UnityAction<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9> Delegate;
 
 		public InvokableCall2(object target, MethodInfo theFunction) : base(target, theFunction)
 		{
-			Delegate += (UnityAction<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>)System.Delegate.CreateDelegate(typeof(UnityAction<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>), target, theFunction);
+			Delegate += (UnityAction<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9>)System.Delegate.CreateDelegate(typeof(UnityAction<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9>), target, theFunction);
 		}
 
-		public InvokableCall2(UnityAction<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10> action)
+		public InvokableCall2(UnityAction<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9> action)
 		{
 			Delegate += action;
 		}
@@ -776,22 +776,22 @@ namespace UnityEngine.Events
 		{
 			if (args.Length != 10)
 				throw new ArgumentException("Passed argument 'args' is invalid size. Expected size is 10");
-			ThrowOnInvalidArg<T1>(args[0], methodName, targetAssembly);
-			ThrowOnInvalidArg<T2>(args[1], methodName, targetAssembly);
-			ThrowOnInvalidArg<T3>(args[2], methodName, targetAssembly);
-			ThrowOnInvalidArg<T4>(args[3], methodName, targetAssembly);
-			ThrowOnInvalidArg<T5>(args[4], methodName, targetAssembly);
-			ThrowOnInvalidArg<T6>(args[5], methodName, targetAssembly);
-			ThrowOnInvalidArg<T7>(args[6], methodName, targetAssembly);
-			ThrowOnInvalidArg<T8>(args[7], methodName, targetAssembly);
-			ThrowOnInvalidArg<T9>(args[8], methodName, targetAssembly);
-			ThrowOnInvalidArg<T10>(args[9], methodName, targetAssembly);
+			ThrowOnInvalidArg<T0>(args[0], methodName, targetAssembly);
+			ThrowOnInvalidArg<T1>(args[1], methodName, targetAssembly);
+			ThrowOnInvalidArg<T2>(args[2], methodName, targetAssembly);
+			ThrowOnInvalidArg<T3>(args[3], methodName, targetAssembly);
+			ThrowOnInvalidArg<T4>(args[4], methodName, targetAssembly);
+			ThrowOnInvalidArg<T5>(args[5], methodName, targetAssembly);
+			ThrowOnInvalidArg<T6>(args[6], methodName, targetAssembly);
+			ThrowOnInvalidArg<T7>(args[7], methodName, targetAssembly);
+			ThrowOnInvalidArg<T8>(args[8], methodName, targetAssembly);
+			ThrowOnInvalidArg<T9>(args[9], methodName, targetAssembly);
 			if (!AllowInvoke(Delegate))
 				return;
-			Delegate((T1)args[0], (T2)args[1], (T3)args[2], (T4)args[3], (T5)args[4], (T6)args[5], (T7)args[6], (T8)args[7], (T9)args[8], (T10)args[9]);
+			Delegate((T0)args[0], (T1)args[1], (T2)args[2], (T3)args[3], (T4)args[4], (T5)args[5], (T6)args[6], (T7)args[7], (T8)args[8], (T9)args[9]);
 		}
 
-		public void Invoke(T1 args0, T2 args1, T3 args2, T4 args3, T5 args4, T6 args5, T7 args6, T8 args7, T9 args8, T10 args9)
+		public virtual void Invoke(T0 args0, T1 args1, T2 args2, T3 args3, T4 args4, T5 args5, T6 args6, T7 args7, T8 args8, T9 args9)
 		{
 			if (AllowInvoke(Delegate))
 				Delegate(args0, args1, args2, args3, args4, args5, args6, args7, args8, args9);
@@ -803,31 +803,20 @@ namespace UnityEngine.Events
 		}
 	}
 
-	class CachedInvokableCall2<T1> : InvokableCall2<T1>
+	public class UpdatableInvokableCall<T0> : InvokableCall2<T0>
 	{
 		private readonly object[] m_Args = new object[1];
 
-		public CachedInvokableCall2(Object target, MethodInfo theFunction, T1 arg) : base(target, theFunction)
-		{
-			m_Args[0] = arg;
-		}
-
-		public override void Invoke(object[] args)
-		{
-			base.Invoke(m_Args);
-		}
-	}
-
-	class UpdatableInvokableCall<T1, T2> : InvokableCall2<T1, T2>
-	{
-		private readonly object[] m_Args = new object[2];
-
 		private bool m_IsEventDefined = false;
 
-		public UpdatableInvokableCall(Object target, MethodInfo theFunction, bool isEventDefined, T1 arg0, T2 arg1) : base(target, theFunction)
+		public UpdatableInvokableCall(Object target, MethodInfo theFunction, bool isEventDefined, T0 arg) : base(target, theFunction)
 		{
-			m_Args[0] = arg0;
-			m_Args[1] = arg1;
+			m_Args[0] = arg;
+			m_IsEventDefined = isEventDefined;
+		}
+
+		public UpdatableInvokableCall(Object target, MethodInfo theFunction, bool isEventDefined) : base(target, theFunction)
+		{
 			m_IsEventDefined = isEventDefined;
 		}
 
@@ -838,15 +827,63 @@ namespace UnityEngine.Events
 					m_Args[i] = args[i];
 			base.Invoke(m_Args);
 		}
+
+		public override void Invoke(T0 args0)
+		{
+			if (m_IsEventDefined)
+			{
+				m_Args[0] = args0;
+			}
+
+			base.Invoke((T0)m_Args[0]);
+		}
 	}
 
-	class UpdatableInvokableCall<T1, T2, T3> : InvokableCall2<T1, T2, T3>
+	public class UpdatableInvokableCall<T0, T1> : InvokableCall2<T0, T1>
+	{
+		private readonly object[] m_Args = new object[2];
+
+		private bool m_IsEventDefined = false;
+
+		public UpdatableInvokableCall(Object target, MethodInfo theFunction, bool isEventDefined, T0 arg0, T1 arg1) : base(target, theFunction)
+		{
+			m_Args[0] = arg0;
+			m_Args[1] = arg1;
+			m_IsEventDefined = isEventDefined;
+		}
+
+		public UpdatableInvokableCall(Object target, MethodInfo theFunction, bool isEventDefined) : base(target, theFunction)
+		{
+			m_IsEventDefined = isEventDefined;
+		}
+
+		public override void Invoke(object[] args)
+		{
+			if (m_IsEventDefined)
+				for (int i = 0; i < args.Length; i++)
+					m_Args[i] = args[i];
+			base.Invoke(m_Args);
+		}
+
+		public override void Invoke(T0 args0, T1 args1)
+		{
+			if (m_IsEventDefined)
+			{
+				m_Args[0] = args0;
+				m_Args[1] = args1;
+			}
+
+			base.Invoke((T0)m_Args[0], (T1)m_Args[1]);
+		}
+	}
+
+	public class UpdatableInvokableCall<T0, T1, T2> : InvokableCall2<T0, T1, T2>
 	{
 		private readonly object[] m_Args = new object[3];
 
 		private bool m_IsEventDefined = false;
 
-		public UpdatableInvokableCall(Object target, MethodInfo theFunction, bool isEventDefined, T1 arg0, T2 arg1, T3 arg2) : base(target, theFunction)
+		public UpdatableInvokableCall(Object target, MethodInfo theFunction, bool isEventDefined, T0 arg0, T1 arg1, T2 arg2) : base(target, theFunction)
 		{
 			m_Args[0] = arg0;
 			m_Args[1] = arg1;
@@ -854,6 +891,11 @@ namespace UnityEngine.Events
 			m_IsEventDefined = isEventDefined;
 		}
 
+		public UpdatableInvokableCall(Object target, MethodInfo theFunction, bool isEventDefined) : base(target, theFunction)
+		{
+			m_IsEventDefined = isEventDefined;
+		}
+
 		public override void Invoke(object[] args)
 		{
 			if (m_IsEventDefined)
@@ -861,15 +903,27 @@ namespace UnityEngine.Events
 					m_Args[i] = args[i];
 			base.Invoke(m_Args);
 		}
+
+		public override void Invoke(T0 args0, T1 args1, T2 args2)
+		{
+			if (m_IsEventDefined)
+			{
+				m_Args[0] = args0;
+				m_Args[1] = args1;
+				m_Args[2] = args2;
+			}
+
+			base.Invoke((T0)m_Args[0], (T1)m_Args[1], (T2)m_Args[2]);
+		}
 	}
 
-	class UpdatableInvokableCall<T1, T2, T3, T4> : InvokableCall2<T1, T2, T3, T4>
+	public class UpdatableInvokableCall<T0, T1, T2, T3> : InvokableCall2<T0, T1, T2, T3>
 	{
 		private readonly object[] m_Args = new object[4];
 
 		private bool m_IsEventDefined = false;
 
-		public UpdatableInvokableCall(Object target, MethodInfo theFunction, bool isEventDefined, T1 arg0, T2 arg1, T3 arg2, T4 arg3) : base(target, theFunction)
+		public UpdatableInvokableCall(Object target, MethodInfo theFunction, bool isEventDefined, T0 arg0, T1 arg1, T2 arg2, T3 arg3) : base(target, theFunction)
 		{
 			m_Args[0] = arg0;
 			m_Args[1] = arg1;
@@ -878,6 +932,11 @@ namespace UnityEngine.Events
 			m_IsEventDefined = isEventDefined;
 		}
 
+		public UpdatableInvokableCall(Object target, MethodInfo theFunction, bool isEventDefined) : base(target, theFunction)
+		{
+			m_IsEventDefined = isEventDefined;
+		}
+
 		public override void Invoke(object[] args)
 		{
 			if (m_IsEventDefined)
@@ -885,15 +944,28 @@ namespace UnityEngine.Events
 					m_Args[i] = args[i];
 			base.Invoke(m_Args);
 		}
+
+		public override void Invoke(T0 args0, T1 args1, T2 args2, T3 args3)
+		{
+			if (m_IsEventDefined)
+			{
+				m_Args[0] = args0;
+				m_Args[1] = args1;
+				m_Args[2] = args2;
+				m_Args[3] = args3;
+			}
+
+			base.Invoke((T0)m_Args[0], (T1)m_Args[1], (T2)m_Args[2], (T3)m_Args[3]);
+		}
 	}
 
-	class UpdatableInvokableCall<T1, T2, T3, T4, T5> : InvokableCall2<T1, T2, T3, T4, T5>
+	public class UpdatableInvokableCall<T0, T1, T2, T3, T4> : InvokableCall2<T0, T1, T2, T3, T4>
 	{
 		private readonly object[] m_Args = new object[5];
 
 		private bool m_IsEventDefined = false;
 
-		public UpdatableInvokableCall(Object target, MethodInfo theFunction, bool isEventDefined, T1 arg0, T2 arg1, T3 arg2, T4 arg3, T5 arg4) : base(target, theFunction)
+		public UpdatableInvokableCall(Object target, MethodInfo theFunction, bool isEventDefined, T0 arg0, T1 arg1, T2 arg2, T3 arg3, T4 arg4) : base(target, theFunction)
 		{
 			m_Args[0] = arg0;
 			m_Args[1] = arg1;
@@ -903,6 +975,11 @@ namespace UnityEngine.Events
 			m_IsEventDefined = isEventDefined;
 		}
 
+		public UpdatableInvokableCall(Object target, MethodInfo theFunction, bool isEventDefined) : base(target, theFunction)
+		{
+			m_IsEventDefined = isEventDefined;
+		}
+
 		public override void Invoke(object[] args)
 		{
 			if (m_IsEventDefined)
@@ -910,15 +987,29 @@ namespace UnityEngine.Events
 					m_Args[i] = args[i];
 			base.Invoke(m_Args);
 		}
+
+		public override void Invoke(T0 args0, T1 args1, T2 args2, T3 args3, T4 args4)
+		{
+			if (m_IsEventDefined)
+			{
+				m_Args[0] = args0;
+				m_Args[1] = args1;
+				m_Args[2] = args2;
+				m_Args[3] = args3;
+				m_Args[4] = args4;
+			}
+
+			base.Invoke((T0)m_Args[0], (T1)m_Args[1], (T2)m_Args[2], (T3)m_Args[3], (T4)m_Args[4]);
+		}
 	}
 
-	class UpdatableInvokableCall<T1, T2, T3, T4, T5, T6> : InvokableCall2<T1, T2, T3, T4, T5, T6>
+	public class UpdatableInvokableCall<T0, T1, T2, T3, T4, T5> : InvokableCall2<T0, T1, T2, T3, T4, T5>
 	{
 		private readonly object[] m_Args = new object[6];
 
 		private bool m_IsEventDefined = false;
 
-		public UpdatableInvokableCall(Object target, MethodInfo theFunction, bool isEventDefined, T1 arg0, T2 arg1, T3 arg2, T4 arg3, T5 arg4, T6 arg5) : base(target, theFunction)
+		public UpdatableInvokableCall(Object target, MethodInfo theFunction, bool isEventDefined, T0 arg0, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5) : base(target, theFunction)
 		{
 			m_Args[0] = arg0;
 			m_Args[1] = arg1;
@@ -929,6 +1020,11 @@ namespace UnityEngine.Events
 			m_IsEventDefined = isEventDefined;
 		}
 
+		public UpdatableInvokableCall(Object target, MethodInfo theFunction, bool isEventDefined) : base(target, theFunction)
+		{
+			m_IsEventDefined = isEventDefined;
+		}
+
 		public override void Invoke(object[] args)
 		{
 			if (m_IsEventDefined)
@@ -936,15 +1032,30 @@ namespace UnityEngine.Events
 					m_Args[i] = args[i];
 			base.Invoke(m_Args);
 		}
+
+		public override void Invoke(T0 args0, T1 args1, T2 args2, T3 args3, T4 args4, T5 args5)
+		{
+			if (m_IsEventDefined)
+			{
+				m_Args[0] = args0;
+				m_Args[1] = args1;
+				m_Args[2] = args2;
+				m_Args[3] = args3;
+				m_Args[4] = args4;
+				m_Args[5] = args5;
+			}
+
+			base.Invoke((T0)m_Args[0], (T1)m_Args[1], (T2)m_Args[2], (T3)m_Args[3], (T4)m_Args[4], (T5)m_Args[5]);
+		}
 	}
 
-	class UpdatableInvokableCall<T1, T2, T3, T4, T5, T6, T7> : InvokableCall2<T1, T2, T3, T4, T5, T6, T7>
+	public class UpdatableInvokableCall<T0, T1, T2, T3, T4, T5, T6> : InvokableCall2<T0, T1, T2, T3, T4, T5, T6>
 	{
 		private readonly object[] m_Args = new object[7];
 
 		private bool m_IsEventDefined = false;
 
-		public UpdatableInvokableCall(Object target, MethodInfo theFunction, bool isEventDefined, T1 arg0, T2 arg1, T3 arg2, T4 arg3, T5 arg4, T6 arg5, T7 arg6) : base(target, theFunction)
+		public UpdatableInvokableCall(Object target, MethodInfo theFunction, bool isEventDefined, T0 arg0, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6) : base(target, theFunction)
 		{
 			m_Args[0] = arg0;
 			m_Args[1] = arg1;
@@ -956,6 +1067,11 @@ namespace UnityEngine.Events
 			m_IsEventDefined = isEventDefined;
 		}
 
+		public UpdatableInvokableCall(Object target, MethodInfo theFunction, bool isEventDefined) : base(target, theFunction)
+		{
+			m_IsEventDefined = isEventDefined;
+		}
+
 		public override void Invoke(object[] args)
 		{
 			if (m_IsEventDefined)
@@ -963,15 +1079,31 @@ namespace UnityEngine.Events
 					m_Args[i] = args[i];
 			base.Invoke(m_Args);
 		}
+
+		public override void Invoke(T0 args0, T1 args1, T2 args2, T3 args3, T4 args4, T5 args5, T6 args6)
+		{
+			if (m_IsEventDefined)
+			{
+				m_Args[0] = args0;
+				m_Args[1] = args1;
+				m_Args[2] = args2;
+				m_Args[3] = args3;
+				m_Args[4] = args4;
+				m_Args[5] = args5;
+				m_Args[6] = args6;
+			}
+
+			base.Invoke((T0)m_Args[0], (T1)m_Args[1], (T2)m_Args[2], (T3)m_Args[3], (T4)m_Args[4], (T5)m_Args[5], (T6)m_Args[6]);
+		}
 	}
 
-	class UpdatableInvokableCall<T1, T2, T3, T4, T5, T6, T7, T8> : InvokableCall2<T1, T2, T3, T4, T5, T6, T7, T8>
+	public class UpdatableInvokableCall<T0, T1, T2, T3, T4, T5, T6, T7> : InvokableCall2<T0, T1, T2, T3, T4, T5, T6, T7>
 	{
 		private readonly object[] m_Args = new object[8];
 
 		private bool m_IsEventDefined = false;
 
-		public UpdatableInvokableCall(Object target, MethodInfo theFunction, bool isEventDefined, T1 arg0, T2 arg1, T3 arg2, T4 arg3, T5 arg4, T6 arg5, T7 arg6, T8 arg7) : base(target, theFunction)
+		public UpdatableInvokableCall(Object target, MethodInfo theFunction, bool isEventDefined, T0 arg0, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7) : base(target, theFunction)
 		{
 			m_Args[0] = arg0;
 			m_Args[1] = arg1;
@@ -984,6 +1116,11 @@ namespace UnityEngine.Events
 			m_IsEventDefined = isEventDefined;
 		}
 
+		public UpdatableInvokableCall(Object target, MethodInfo theFunction, bool isEventDefined) : base(target, theFunction)
+		{
+			m_IsEventDefined = isEventDefined;
+		}
+
 		public override void Invoke(object[] args)
 		{
 			if (m_IsEventDefined)
@@ -991,15 +1128,32 @@ namespace UnityEngine.Events
 					m_Args[i] = args[i];
 			base.Invoke(m_Args);
 		}
+
+		public override void Invoke(T0 args0, T1 args1, T2 args2, T3 args3, T4 args4, T5 args5, T6 args6, T7 args7)
+		{
+			if (m_IsEventDefined)
+			{
+				m_Args[0] = args0;
+				m_Args[1] = args1;
+				m_Args[2] = args2;
+				m_Args[3] = args3;
+				m_Args[4] = args4;
+				m_Args[5] = args5;
+				m_Args[6] = args6;
+				m_Args[7] = args7;
+			}
+
+			base.Invoke((T0)m_Args[0], (T1)m_Args[1], (T2)m_Args[2], (T3)m_Args[3], (T4)m_Args[4], (T5)m_Args[5], (T6)m_Args[6], (T7)m_Args[7]);
+		}
 	}
 
-	class UpdatableInvokableCall<T1, T2, T3, T4, T5, T6, T7, T8, T9> : InvokableCall2<T1, T2, T3, T4, T5, T6, T7, T8, T9>
+	public class UpdatableInvokableCall<T0, T1, T2, T3, T4, T5, T6, T7, T8> : InvokableCall2<T0, T1, T2, T3, T4, T5, T6, T7, T8>
 	{
 		private readonly object[] m_Args = new object[9];
 
 		private bool m_IsEventDefined = false;
 
-		public UpdatableInvokableCall(Object target, MethodInfo theFunction, bool isEventDefined, T1 arg0, T2 arg1, T3 arg2, T4 arg3, T5 arg4, T6 arg5, T7 arg6, T8 arg7, T9 arg8) : base(target, theFunction)
+		public UpdatableInvokableCall(Object target, MethodInfo theFunction, bool isEventDefined, T0 arg0, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8) : base(target, theFunction)
 		{
 			m_Args[0] = arg0;
 			m_Args[1] = arg1;
@@ -1013,6 +1167,11 @@ namespace UnityEngine.Events
 			m_IsEventDefined = isEventDefined;
 		}
 
+		public UpdatableInvokableCall(Object target, MethodInfo theFunction, bool isEventDefined) : base(target, theFunction)
+		{
+			m_IsEventDefined = isEventDefined;
+		}
+
 		public override void Invoke(object[] args)
 		{
 			if (m_IsEventDefined)
@@ -1020,15 +1179,33 @@ namespace UnityEngine.Events
 					m_Args[i] = args[i];
 			base.Invoke(m_Args);
 		}
+
+		public override void Invoke(T0 args0, T1 args1, T2 args2, T3 args3, T4 args4, T5 args5, T6 args6, T7 args7, T8 args8)
+		{
+			if (m_IsEventDefined)
+			{
+				m_Args[0] = args0;
+				m_Args[1] = args1;
+				m_Args[2] = args2;
+				m_Args[3] = args3;
+				m_Args[4] = args4;
+				m_Args[5] = args5;
+				m_Args[6] = args6;
+				m_Args[7] = args7;
+				m_Args[8] = args8;
+			}
+
+			base.Invoke((T0)m_Args[0], (T1)m_Args[1], (T2)m_Args[2], (T3)m_Args[3], (T4)m_Args[4], (T5)m_Args[5], (T6)m_Args[6], (T7)m_Args[7], (T8)m_Args[8]);
+		}
 	}
 
-	class UpdatableInvokableCall<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10> : InvokableCall2<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>
+	public class UpdatableInvokableCall<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9> : InvokableCall2<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9>
 	{
 		private readonly object[] m_Args = new object[10];
 
 		private bool m_IsEventDefined = false;
 
-		public UpdatableInvokableCall(Object target, MethodInfo theFunction, bool isEventDefined, T1 arg0, T2 arg1, T3 arg2, T4 arg3, T5 arg4, T6 arg5, T7 arg6, T8 arg7, T9 arg8, T10 arg9) : base(target, theFunction)
+		public UpdatableInvokableCall(Object target, MethodInfo theFunction, bool isEventDefined, T0 arg0, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9) : base(target, theFunction)
 		{
 			m_Args[0] = arg0;
 			m_Args[1] = arg1;
@@ -1043,12 +1220,36 @@ namespace UnityEngine.Events
 			m_IsEventDefined = isEventDefined;
 		}
 
+		public UpdatableInvokableCall(Object target, MethodInfo theFunction, bool isEventDefined) : base(target, theFunction)
+		{
+			m_IsEventDefined = isEventDefined;
+		}
+
 		public override void Invoke(object[] args)
 		{
 			if (m_IsEventDefined)
 				for (int i = 0; i < args.Length; i++)
 					m_Args[i] = args[i];
 			base.Invoke(m_Args);
+		}
+
+		public override void Invoke(T0 args0, T1 args1, T2 args2, T3 args3, T4 args4, T5 args5, T6 args6, T7 args7, T8 args8, T9 args9)
+		{
+			if (m_IsEventDefined)
+			{
+				m_Args[0] = args0;
+				m_Args[1] = args1;
+				m_Args[2] = args2;
+				m_Args[3] = args3;
+				m_Args[4] = args4;
+				m_Args[5] = args5;
+				m_Args[6] = args6;
+				m_Args[7] = args7;
+				m_Args[8] = args8;
+				m_Args[9] = args9;
+			}
+
+			base.Invoke((T0)m_Args[0], (T1)m_Args[1], (T2)m_Args[2], (T3)m_Args[3], (T4)m_Args[4], (T5)m_Args[5], (T6)m_Args[6], (T7)m_Args[7], (T8)m_Args[8], (T9)m_Args[9]);
 		}
 	}
 
@@ -1123,73 +1324,68 @@ namespace UnityEngine.Events
 			{
 				switch (m_Modes[0])
 				{
-					case PersistentListenerMode2.EventDefined:
-						return theEvent.GetDelegate(target, method);
 					case PersistentListenerMode2.Void:
 						return new InvokableCall2(target, method);
-					case PersistentListenerMode2.Object:
-						return GetObjectCall(target, method, m_Arguments[0]);
 					case PersistentListenerMode2.Int:
-						return new CachedInvokableCall2<int>(target, method, m_Arguments[0].intArgument);
+						return new UpdatableInvokableCall<int>(target, method, false, m_Arguments[0].intArgument);
 					case PersistentListenerMode2.Float:
-						return new CachedInvokableCall2<float>(target, method, m_Arguments[0].floatArgument);
+						return new UpdatableInvokableCall<float>(target, method, false, m_Arguments[0].floatArgument);
 					case PersistentListenerMode2.String:
-						return new CachedInvokableCall2<string>(target, method, m_Arguments[0].stringArgument);
+						return new UpdatableInvokableCall<string>(target, method, false, m_Arguments[0].stringArgument);
 					case PersistentListenerMode2.Bool:
-						return new CachedInvokableCall2<bool>(target, method, m_Arguments[0].boolArgument);
-					case PersistentListenerMode2.Enum:
-						return new CachedInvokableCall2<int>(target, method, m_Arguments[0].intArgument);
+						return new UpdatableInvokableCall<bool>(target, method, false, m_Arguments[0].boolArgument);
 					case PersistentListenerMode2.Vector2:
-						return new CachedInvokableCall2<Vector2>(target, method, m_Arguments[0].vector2Argument);
+						return new UpdatableInvokableCall<Vector2>(target, method, false, m_Arguments[0].vector2Argument);
+					case PersistentListenerMode2.Vector3:
+						return new UpdatableInvokableCall<Vector3>(target, method, false, m_Arguments[0].vector3Argument);
 #if UNITY_2017_2_OR_NEWER
 					case PersistentListenerMode2.Vector2Int:
-						return new CachedInvokableCall2<Vector2Int>(target, method, m_Arguments[0].vector2IntArgument);
-#endif
-					case PersistentListenerMode2.Vector3:
-						return new CachedInvokableCall2<Vector3>(target, method, m_Arguments[0].vector3Argument);
-#if UNITY_2017_2_OR_NEWER
+						return new UpdatableInvokableCall<Vector2Int>(target, method, false, m_Arguments[0].vector2IntArgument);
 					case PersistentListenerMode2.Vector3Int:
-						return new CachedInvokableCall2<Vector3Int>(target, method, m_Arguments[0].vector3IntArgument);
+						return new UpdatableInvokableCall<Vector3Int>(target, method, false, m_Arguments[0].vector3IntArgument);
 #endif
 					case PersistentListenerMode2.Vector4:
-						return new CachedInvokableCall2<Vector4>(target, method, m_Arguments[0].vector4Argument);
+						return new UpdatableInvokableCall<Vector4>(target, method, false, m_Arguments[0].vector4Argument);
 					case PersistentListenerMode2.LayerMask:
-						return new CachedInvokableCall2<LayerMask>(target, method, m_Arguments[0].layerMaskArgument);
+						return new UpdatableInvokableCall<LayerMask>(target, method, false, m_Arguments[0].layerMaskArgument);
 					case PersistentListenerMode2.Color:
-						return new CachedInvokableCall2<Color>(target, method, m_Arguments[0].colorArgument);
+						return new UpdatableInvokableCall<Color>(target, method, false, m_Arguments[0].colorArgument);
+					case PersistentListenerMode2.Object:
+						return GetObjectCall(target, method, m_Arguments[0]);
 					default:
-						return null;
+						break;
 				}
 			}
 
 			return GetInvokableCall(target, method, m_Modes, m_Arguments.ToArray(), parameters);
 		}
 
-		private static BaseInvokableCall2 GetObjectCall(Object target, MethodInfo method, ArgumentCache2 argument)
+		private BaseInvokableCall2 GetObjectCall(Object target, MethodInfo method, ArgumentCache2 argument)
 		{
 			Type type = typeof(Object);
 			if (!string.IsNullOrEmpty(argument.unityObjectArgumentAssemblyTypeName))
 				type = Type.GetType(argument.unityObjectArgumentAssemblyTypeName, false) ?? typeof(Object);
-			ConstructorInfo constructor = typeof(CachedInvokableCall2<>).MakeGenericType(type).GetConstructor(new Type[3] { typeof(Object), typeof(MethodInfo), type });
+			ConstructorInfo constructor = typeof(UpdatableInvokableCall<>).MakeGenericType(type).GetConstructor(new Type[] { typeof(Object), typeof(MethodInfo), typeof(bool), type });
 			Object @object = argument.unityObjectArgument;
 			if (@object != null && !type.IsAssignableFrom(@object.GetType()))
 				@object = null;
-			return constructor.Invoke(new object[3] { target, method, @object }) as BaseInvokableCall2;
+
+			return constructor.Invoke(new object[] { target, method, false, @object }) as BaseInvokableCall2;
 		}
 
-		private static BaseInvokableCall2 GetInvokableCall(Object target, MethodInfo method, List<PersistentListenerMode2> modes, ArgumentCache2[] arguments, object[] informedParameters)
+		private BaseInvokableCall2 GetInvokableCall(Object target, MethodInfo method, List<PersistentListenerMode2> modes, ArgumentCache2[] arguments, object[] informedParameters)
 		{
 			Type[] typeArguments = new Type[arguments.Length];
 			Type[] types = new Type[arguments.Length + 3];
-			object[] constructorParameters = new object[arguments.Length + 3];
+			object[] parameters = new object[arguments.Length + 3];
 
 			types[0] = typeof(Object);
 			types[1] = typeof(MethodInfo);
 			types[2] = typeof(bool);
 
-			constructorParameters[0] = target;
-			constructorParameters[1] = method;
-			constructorParameters[2] = false;
+			parameters[0] = target;
+			parameters[1] = method;
+			parameters[2] = false;
 
 			for (int i = 0; i < typeArguments.Length; i++)
 			{
@@ -1198,16 +1394,20 @@ namespace UnityEngine.Events
 
 				if (modes[i] == PersistentListenerMode2.EventDefined)
 				{
-					constructorParameters[2] = true;
-					constructorParameters[i + 3] = informedParameters[i];
+					parameters[2] = true;
+					parameters[i + 3] = informedParameters[i];
 				}
 				else
-					constructorParameters[i + 3] = GetValue(typeArguments[i], arguments[i]);
+				{
+					parameters[i + 3] = GetValue(typeArguments[i], arguments[i]);
+				}
 			}
 
 			Type invokableType = typeof(InvokableCall2);
 
-			if (typeArguments.Length == 2)
+			if (typeArguments.Length == 1)
+				invokableType = typeof(UpdatableInvokableCall<>);
+			else if (typeArguments.Length == 2)
 				invokableType = typeof(UpdatableInvokableCall<,>);
 			else if (typeArguments.Length == 3)
 				invokableType = typeof(UpdatableInvokableCall<,,>);
@@ -1228,13 +1428,15 @@ namespace UnityEngine.Events
 
 			ConstructorInfo constructor = invokableType.MakeGenericType(typeArguments).GetConstructor(types);
 
-			return constructor == null ? null : constructor.Invoke(constructorParameters) as BaseInvokableCall2;
+			return constructor == null ? null : constructor.Invoke(parameters) as BaseInvokableCall2;
 		}
 
-		private static object GetValue(Type type, ArgumentCache2 argument)
+		private object GetValue(Type type, ArgumentCache2 argument)
 		{
-			if (type == typeof(int) || type.IsEnum)
+			if (type == typeof(int))
 				return argument.intArgument;
+			else if (type.IsEnum)
+				return Enum.GetValues(type).GetValue(argument.intArgument);
 			else if (type == typeof(float))
 				return argument.floatArgument;
 			else if (type == typeof(string))
@@ -1243,13 +1445,11 @@ namespace UnityEngine.Events
 				return argument.boolArgument;
 			else if (type == typeof(Vector2))
 				return argument.vector2Argument;
-#if UNITY_2017_2_OR_NEWER
-			else if (type == typeof(Vector2Int))
-				return argument.vector2IntArgument;
-#endif
 			else if (type == typeof(Vector3))
 				return argument.vector3Argument;
 #if UNITY_2017_2_OR_NEWER
+			else if (type == typeof(Vector2Int))
+				return argument.vector2IntArgument;
 			else if (type == typeof(Vector3Int))
 				return argument.vector3IntArgument;
 #endif
@@ -1259,6 +1459,9 @@ namespace UnityEngine.Events
 				return argument.layerMaskArgument;
 			else if (type == typeof(Color))
 				return argument.colorArgument;
+
+			if (argument.unityObjectArgument != null && !type.IsAssignableFrom(argument.unityObjectArgument.GetType()))
+				return null;
 
 			return argument.unityObjectArgument;
 		}
@@ -1661,8 +1864,8 @@ namespace UnityEngine.Events
 
 		private void RebuildPersistentCallsIfNeeded(object[] parameters)
 		{
-			if (!m_CallsDirty)
-				return;
+			if (!m_CallsDirty) return;
+
 			m_PersistentCalls.Initialize(m_Calls, this, parameters);
 			m_CallsDirty = false;
 		}
@@ -1832,14 +2035,14 @@ namespace UnityEngine.Events
 			}
 		}
 
-		internal void AddIntPersistentListener(UnityAction<int> call, int argument)
+		void AddIntPersistentListener(UnityAction<int> call, int argument)
 		{
 			int persistentEventCount = GetPersistentEventCount();
 			AddPersistentListener();
 			RegisterIntPersistentListener(persistentEventCount, call, argument);
 		}
 
-		internal void RegisterIntPersistentListener(int index, UnityAction<int> call, int argument)
+		void RegisterIntPersistentListener(int index, UnityAction<int> call, int argument)
 		{
 			if (call == null)
 			{
@@ -1854,14 +2057,14 @@ namespace UnityEngine.Events
 			}
 		}
 
-		internal void AddFloatPersistentListener(UnityAction<float> call, float argument)
+		void AddFloatPersistentListener(UnityAction<float> call, float argument)
 		{
 			int persistentEventCount = GetPersistentEventCount();
 			AddPersistentListener();
 			RegisterFloatPersistentListener(persistentEventCount, call, argument);
 		}
 
-		internal void RegisterFloatPersistentListener(int index, UnityAction<float> call, float argument)
+		void RegisterFloatPersistentListener(int index, UnityAction<float> call, float argument)
 		{
 			if (call == null)
 			{
@@ -1876,14 +2079,14 @@ namespace UnityEngine.Events
 			}
 		}
 
-		internal void AddBoolPersistentListener(UnityAction<bool> call, bool argument)
+		void AddBoolPersistentListener(UnityAction<bool> call, bool argument)
 		{
 			int persistentEventCount = GetPersistentEventCount();
 			AddPersistentListener();
 			RegisterBoolPersistentListener(persistentEventCount, call, argument);
 		}
 
-		internal void RegisterBoolPersistentListener(int index, UnityAction<bool> call, bool argument)
+		void RegisterBoolPersistentListener(int index, UnityAction<bool> call, bool argument)
 		{
 			if (call == null)
 			{
@@ -1898,14 +2101,14 @@ namespace UnityEngine.Events
 			}
 		}
 
-		internal void AddEnumPersistentListener(UnityAction<Enum> call, Enum argument)
+		void AddEnumPersistentListener(UnityAction<Enum> call, Enum argument)
 		{
 			int persistentEventCount = GetPersistentEventCount();
 			AddPersistentListener();
 			RegisterEnumPersistentListener(persistentEventCount, call, argument);
 		}
 
-		internal void RegisterEnumPersistentListener(int index, UnityAction<Enum> call, Enum argument)
+		void RegisterEnumPersistentListener(int index, UnityAction<Enum> call, Enum argument)
 		{
 			if (call == null)
 			{
@@ -1980,29 +2183,6 @@ namespace UnityEngine.Events
 				DirtyPersistentCalls();
 			}
 		}
-#if UNITY_2017_2_OR_NEWER
-		internal void AddVector2IntPersistentListener(UnityAction<Vector2Int> call, Vector2Int argument)
-		{
-			int persistentEventCount = GetPersistentEventCount();
-			AddPersistentListener();
-			RegisterVector2IntPersistentListener(persistentEventCount, call, argument);
-		}
-
-		internal void RegisterVector2IntPersistentListener(int index, UnityAction<Vector2Int> call, Vector2Int argument)
-		{
-			if (call == null)
-			{
-				Debug.LogWarning("Registering a Listener requires an action");
-			}
-			else
-			{
-				if (!ValidateRegistration(call.Method, call.Target, PersistentListenerMode2.Vector2Int))
-					return;
-				m_PersistentCalls.RegisterVector2PersistentListener(index, call.Target as Object, argument, call.Method.Name);
-				DirtyPersistentCalls();
-			}
-		}
-#endif
 
 		internal void AddVector3PersistentListener(UnityAction<Vector3> call, Vector3 argument)
 		{
@@ -2025,7 +2205,30 @@ namespace UnityEngine.Events
 				DirtyPersistentCalls();
 			}
 		}
+
 #if UNITY_2017_2_OR_NEWER
+		internal void AddVector2IntPersistentListener(UnityAction<Vector2Int> call, Vector2Int argument)
+		{
+			int persistentEventCount = GetPersistentEventCount();
+			AddPersistentListener();
+			RegisterVector2IntPersistentListener(persistentEventCount, call, argument);
+		}
+
+		internal void RegisterVector2IntPersistentListener(int index, UnityAction<Vector2Int> call, Vector2Int argument)
+		{
+			if (call == null)
+			{
+				Debug.LogWarning("Registering a Listener requires an action");
+			}
+			else
+			{
+				if (!ValidateRegistration(call.Method, call.Target, PersistentListenerMode2.Vector2Int))
+					return;
+				m_PersistentCalls.RegisterVector2PersistentListener(index, call.Target as Object, argument, call.Method.Name);
+				DirtyPersistentCalls();
+			}
+		}
+
 		internal void AddVector3IntPersistentListener(UnityAction<Vector3Int> call, Vector3Int argument)
 		{
 			int persistentEventCount = GetPersistentEventCount();

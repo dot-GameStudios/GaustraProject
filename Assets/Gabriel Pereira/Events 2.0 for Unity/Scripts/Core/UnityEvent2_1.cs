@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Reflection;
 
 namespace UnityEngine.Events
@@ -7,8 +6,8 @@ namespace UnityEngine.Events
 	/// <summary>
 	/// Events 2.0 for Unity with one generic type
 	/// </summary>
-	[Serializable]
-	public abstract class UnityEvent2<T1> : UnityEventBase2
+	[System.Serializable]
+	public abstract class UnityEvent2<T0> : UnityEventBase2
 	{
 		private readonly object[] m_InvokeArray = new object[1];
 
@@ -21,7 +20,7 @@ namespace UnityEngine.Events
 		/// Add a non persistent listener to the UnityEvent.
 		/// </summary>
 		/// <param name="call">Callback function.</param>
-		public void AddListener(UnityAction<T1> call)
+		public void AddListener(UnityAction<T0> call)
 		{
 			AddCall(GetDelegate(call));
 		}
@@ -30,36 +29,36 @@ namespace UnityEngine.Events
 		/// Remove a non persistent listener from the UnityEvent.
 		/// </summary>
 		/// <param name="call">Callback function.</param>
-		public void RemoveListener(UnityAction<T1> call)
+		public void RemoveListener(UnityAction<T0> call)
 		{
 			RemoveListener(call.Target, call.Method);
 		}
 
 		protected override MethodInfo FindMethod_Impl(object targetObj, string name)
 		{
-			return GetValidMethodInfo(targetObj, name, new Type[1] { typeof(T1) });
+			return GetValidMethodInfo(targetObj, name, new System.Type[1] { typeof(T0) });
 		}
 
 		internal override BaseInvokableCall2 GetDelegate(object target, MethodInfo theFunction)
 		{
-			return new InvokableCall2<T1>(target, theFunction);
+			return new InvokableCall2<T0>(target, theFunction);
 		}
 
-		private static BaseInvokableCall2 GetDelegate(UnityAction<T1> action)
+		private static BaseInvokableCall2 GetDelegate(UnityAction<T0> action)
 		{
-			return new InvokableCall2<T1>(action);
+			return new InvokableCall2<T0>(action);
 		}
 
 		/// <summary>
 		/// Invoke all registered callbacks (runtime and persistent).
 		/// </summary>
 		/// <param name="arg1">Dynamic argument 1</param>
-		public void Invoke(T1 arg1)
+		public void Invoke(T0 arg1)
 		{
 			List<BaseInvokableCall2> calls = PrepareInvoke(arg1);
 			for (var i = 0; i < calls.Count; i++)
 			{
-				var curCall = calls[i] as InvokableCall2<T1>;
+				var curCall = calls[i] as InvokableCall2<T0>;
 				if (curCall != null)
 					curCall.Invoke(arg1);
 				else
@@ -76,12 +75,12 @@ namespace UnityEngine.Events
 			}
 		}
 
-		internal void AddPersistentListener(UnityAction<T1> call)
+		internal void AddPersistentListener(UnityAction<T0> call)
 		{
 			AddPersistentListener(call, UnityEventCallState.RuntimeOnly);
 		}
 
-		internal void AddPersistentListener(UnityAction<T1> call, UnityEventCallState callState)
+		internal void AddPersistentListener(UnityAction<T0> call, UnityEventCallState callState)
 		{
 			int persistentEventCount = GetPersistentEventCount();
 			AddPersistentListener();
@@ -89,7 +88,7 @@ namespace UnityEngine.Events
 			SetPersistentListenerState(persistentEventCount, callState);
 		}
 
-		internal void RegisterPersistentListener(int index, UnityAction<T1> call)
+		internal void RegisterPersistentListener(int index, UnityAction<T0> call)
 		{
 			if (call == null)
 				Debug.LogWarning("Registering a Listener requires an action");

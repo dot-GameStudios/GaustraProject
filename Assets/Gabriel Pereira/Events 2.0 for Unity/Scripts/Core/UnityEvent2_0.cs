@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Reflection;
-using UnityEngineInternal;
 
 namespace UnityEngine.Events
 {
 	/// <summary>
 	/// Events 2.0 for Unity
 	/// </summary>
-	[Serializable]
+	[System.Serializable]
 	public class UnityEvent2 : UnityEventBase2
 	{
 		private readonly object[] m_InvokeArray = new object[0];
@@ -38,7 +36,7 @@ namespace UnityEngine.Events
 
 		protected override MethodInfo FindMethod_Impl(object targetObj, string name)
 		{
-			return GetValidMethodInfo(targetObj, name, new Type[0]);
+			return GetValidMethodInfo(targetObj, name, new System.Type[0]);
 		}
 
 		internal override BaseInvokableCall2 GetDelegate(object target, MethodInfo theFunction)

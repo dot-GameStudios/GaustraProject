@@ -13,7 +13,9 @@ public class StateInputController : MonoBehaviour
 
     [Header("Keys")]
     [SerializeField] private List<DataInputKey> keys = new List<DataInputKey>();
+    [SerializeField] private List<DataInputAction> Actions = new List<DataInputAction>();
     public DataInputKey GetKey(string name) { return keys.Find(key => key.Name == name); }
+    public DataInputAction GetAction(string name) { return Actions.Find(action => action.Name == name); }
     public List<DataInputKey> Keys { get => keys; }
 
     [Header("References")]
@@ -23,20 +25,26 @@ public class StateInputController : MonoBehaviour
 
     void Awake()
     {
+        //for (int i = keys.Count - 1; i >= 0; i--)
+        //    keys[i].Start(data);
+        for (int i = Actions.Count - 1; i >= 0; i--)
+            Actions[i].Start(data);
 
-        for (int i = keys.Count - 1; i >= 0; i--)
-            keys[i].Start(data);
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         //Debug.Log(inputMaster.PlayerControls.Get().actions);
-        for (int i = keys.Count - 1; i >= 0; i--)
-        {
-            keys[i].Update();
-        }
+        //for (int i = keys.Count - 1; i >= 0; i--)
+        //{
+        //    keys[i].Update();
+        //}
 
+        for (int i = Actions.Count - 1; i >= 0; i--)
+        {
+            Actions[i].Update();
+        }
     }
 
     public void CheckStateActive()
@@ -47,35 +55,46 @@ public class StateInputController : MonoBehaviour
         }
     }
 
-    public void InputKeyBoolConditionLock(string keyName, string Condition_)
+    public void InputActionBoolConditionLock(string actionName, string Condition_)
     {
         //with a string to the Key's name and the string to the Condition it is tied to, set the Key's active equal to the Bool condition
         var Condition = data.GetBool(Condition_);
-        GetKey(keyName).SetActive(Condition.Value);
+        GetAction(actionName).SetActive(Condition.Value);
         
     }
 
     public void InputKeyLocked(string keyName)
     {
-        GetKey(keyName).SetActive(false);
+        //GetKey(keyName).SetActive(false);
     }
 
-    public void InoutKeyUnlocked(string keyName)
+    public void InputKeyUnlocked(string keyName)
     {
-        GetKey(keyName).SetActive(true);
+        //GetKey(keyName).SetActive(true);
     }
 
     public void InputKeyToggle(string keyName)
     {
-        GetKey(keyName).toggleActive();
+       // GetKey(keyName).toggleActive();
     }
 
     public void TotalInputLockToggle(bool value)
     {
         //Loop through all the keys and set InputLock based on the given value
-        for (int i = keys.Count - 1; i >= 0; i--)
+        for (int i = Actions.Count - 1; i >= 0; i--)
         {
-            keys[i].SetActive(value);
+            Actions[i].SetActive(value);
+        }
+    }
+
+    IEnumerator NextInputCountDown(float time)
+    {
+        float inputTimer = time;
+
+        while (inputTimer >= 0)
+        {
+            inputTimer -= Time.deltaTime;
+            yield return null;
         }
     }
 }

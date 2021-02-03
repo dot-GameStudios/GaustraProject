@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class Elevator : MonoBehaviour
 {
-
+    
     [Header("Elevator Data")]
     public float ElevatorMovementSpeed;
     public Transform StoppedAt;
@@ -32,8 +33,8 @@ public class Elevator : MonoBehaviour
             if(StopPoints[i] == StoppedAt)
             {
                 StoppedAt = StopPoints[i + 1];
-                //StopAllCoroutines();
-                //StartCoroutine(FloorChange(StoppedAt.position));
+                StopAllCoroutines();
+                StartCoroutine(FloorChange(StoppedAt.position));
             }
         }
     }

@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Rigidbody2DVelocityFromData : MonoBehaviour
 {
-    [Header("Data")]
+    //[Header("Data")]
 
-    [SerializeField] private List<DataBool> dataBools = new List<DataBool>();
-    [SerializeField] private List<DataInt> dataInts = new List<DataInt>();
-    [SerializeField] private List<DataFloat> dataFloats = new List<DataFloat>();
-    [SerializeField] private List<DataVector2> dataVector2s = new List<DataVector2>();
+    //[SerializeField] private List<DataBool> dataBools = new List<DataBool>();
+    //[SerializeField] private List<DataInt> dataInts = new List<DataInt>();
+    //[SerializeField] private List<DataFloat> dataFloats = new List<DataFloat>();
+    //[SerializeField] private List<DataVector2> dataVector2s = new List<DataVector2>();
 
 
     [Header("Neccesary Data")]
@@ -22,7 +22,7 @@ public class Rigidbody2DVelocityFromData : MonoBehaviour
     private RaycastHit2D slopeDetect;
     [Header("References")]
     [SerializeField] private Data data;
-    [SerializeField] private DataInputController dataInputs;
+    //[SerializeField] private DataInputController dataInputs;
     [SerializeField] private Rigidbody2D RB2D;
 
     // Start is called before the first frame update
@@ -31,28 +31,6 @@ public class Rigidbody2DVelocityFromData : MonoBehaviour
         data = GetComponent<Data>();
         RB2D = GetComponent<Rigidbody2D>();
 
-
-        /*for (int i = dataBools.Count - 1; i >= 0; i--)
-        {
-            dataBools[i] = data.GetBool(dataBools[i].Name);
-        }
-
-        for (int i = dataInts.Count - 1; i >= 0; i--)
-        {
-            dataInts[i] = data.GetInt(dataInts[i].Name);
-        }
-
-        for (int i = dataFloats.Count - 1; i >= 0; i--)
-        {
-            dataFloats[i] = data.GetFloat(dataFloats[i].Name);
-        }
-
-        for (int i = dataVector2s.Count - 1; i >= 0; i--)
-        {
-            dataVector2s[i] = data.GetVector2(dataVector2s[i].Name);
-        }
-
-        dataFloats.Add(data.GetFloat(MoveDirection));*/
     }
 
     // Update is called once per frame
@@ -86,6 +64,15 @@ public class Rigidbody2DVelocityFromData : MonoBehaviour
             RB2D.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         }
     }
+    public void VerticalMovement(float value)
+    {
+        RB2D.velocity = new Vector2(RB2D.velocity.x, value);
+    }
+
+    public void VerticalVelocity(string VMoveNode, float value)
+    {
+        RB2D.velocity = new Vector2(RB2D.velocity.x, data.GetFloat(VMoveNode).Value * value);
+    }
 
     public void HorizontalMovement(float value)
     {
@@ -99,7 +86,6 @@ public class Rigidbody2DVelocityFromData : MonoBehaviour
         float NewAngle = Vector2.Angle(data.GetVector2(SlopeNode).Value, Vector2.up);
         //Debug.Log(NewAngle);
         //Debug.Log(PrevAngle);
-        
 
         if (data.GetFloat(JumpNode).Value <= 0 && data.GetBool(SlopeCheck).Value)
         {
@@ -110,7 +96,6 @@ public class Rigidbody2DVelocityFromData : MonoBehaviour
         {
             RB2D.velocity = new Vector2(data.GetInt(MoveSpeed).Value * data.GetFloat(MoveNode).Value, RB2D.velocity.y);
         }
-
         if (data.GetFloat(MoveNode).Value == -1 && NewAngle > PrevAngle || data.GetFloat(MoveNode).Value == 1 && NewAngle < PrevAngle)
         {
             if(RB2D.velocity.y > 0 && data.GetFloat(JumpNode).Value <= 0)
@@ -118,16 +103,13 @@ public class Rigidbody2DVelocityFromData : MonoBehaviour
                 RB2D.velocity = new Vector2(RB2D.velocity.x, RB2D.velocity.y * -1);
             }
         }
-        
+
+
         Debug.DrawLine(RB2D.position, RB2D.position + RB2D.velocity.normalized, Color.green);
 
         previousMoveDir = data.GetVector2(SlopeNode).Value;
     }
 
-    public void VerticalMovement(float value)
-    {
-        RB2D.velocity = new Vector2(RB2D.velocity.x, value);
-    }
 
     public void ResetVelocityX()
     {
@@ -161,5 +143,10 @@ public class Rigidbody2DVelocityFromData : MonoBehaviour
     public void SetLinearDrag(int drag)
     {
         RB2D.drag = drag;
+    }
+
+    public void SetGravityScale(int newGravity)
+    {
+        RB2D.gravityScale = newGravity;
     }
 }

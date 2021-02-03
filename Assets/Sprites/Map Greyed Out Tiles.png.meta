@@ -1,0 +1,1288 @@
+fileFormatVersion: 2
+guid: 89b97e348c7ac144285573363e389deb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7276007134400663167
+    second: Map Greyed Out Tiles_0
+  - first:
+      213: -8820972676664768758
+    second: Map Greyed Out Tiles_1
+  - first:
+      213: 554280897106885591
+    second: Map Greyed Out Tiles_2
+  - first:
+      213: 2832748350790842060
+    second: Map Greyed Out Tiles_3
+  - first:
+      213: 8935787831346983430
+    second: Map Greyed Out Tiles_4
+  - first:
+      213: -8779832422899778738
+    second: Map Greyed Out Tiles_5
+  - first:
+      213: 779093546159140336
+    second: Map Greyed Out Tiles_6
+  - first:
+      213: -2945369053133748727
+    second: Map Greyed Out Tiles_7
+  - first:
+      213: 3502946129162671088
+    second: Map Greyed Out Tiles_8
+  - first:
+      213: 4414118645802021028
+    second: Map Greyed Out Tiles_9
+  - first:
+      213: 3572354153149195184
+    second: Map Greyed Out Tiles_10
+  - first:
+      213: 248157602139821150
+    second: Map Greyed Out Tiles_11
+  - first:
+      213: -6457174285682095329
+    second: Map Greyed Out Tiles_12
+  - first:
+      213: 2534068333859281923
+    second: Map Greyed Out Tiles_13
+  - first:
+      213: 9214176901710901773
+    second: Map Greyed Out Tiles_14
+  - first:
+      213: -218436096816155508
+    second: Map Greyed Out Tiles_15
+  - first:
+      213: 3963320938198642864
+    second: Map Greyed Out Tiles_16
+  - first:
+      213: 3054127158240314987
+    second: Map Greyed Out Tiles_17
+  - first:
+      213: -3266855321230847055
+    second: Map Greyed Out Tiles_18
+  - first:
+      213: -3220463605847480079
+    second: Map Greyed Out Tiles_19
+  - first:
+      213: -7559029804056844953
+    second: Map Greyed Out Tiles_20
+  - first:
+      213: 4974319437003139950
+    second: Map Greyed Out Tiles_21
+  - first:
+      213: -8780982849668792703
+    second: Map Greyed Out Tiles_22
+  - first:
+      213: 4970662842100876580
+    second: Map Greyed Out Tiles_23
+  - first:
+      213: 5091866488088001697
+    second: Map Greyed Out Tiles_24
+  - first:
+      213: 727643245636969231
+    second: Map Greyed Out Tiles_25
+  - first:
+      213: -2437111440895118852
+    second: Map Greyed Out Tiles_26
+  - first:
+      213: -8522977898569158944
+    second: Map Greyed Out Tiles_27
+  - first:
+      213: -5279094882540256101
+    second: Map Greyed Out Tiles_28
+  - first:
+      213: -2930680498967330383
+    second: Map Greyed Out Tiles_29
+  - first:
+      213: 3013327448287002421
+    second: Map Greyed Out Tiles_30
+  - first:
+      213: 5607385271519837179
+    second: Map Greyed Out Tiles_31
+  - first:
+      213: 7191272329251612216
+    second: Map Greyed Out Tiles_32
+  - first:
+      213: -1755181311621645218
+    second: Map Greyed Out Tiles_33
+  - first:
+      213: 149517990607102776
+    second: Map Greyed Out Tiles_34
+  - first:
+      213: -3447593964415264066
+    second: Map Greyed Out Tiles_35
+  - first:
+      213: 2253107921396028150
+    second: Map Greyed Out Tiles_36
+  - first:
+      213: -6231843422391021155
+    second: Map Greyed Out Tiles_37
+  - first:
+      213: 4813407337529326255
+    second: Map Greyed Out Tiles_38
+  - first:
+      213: 4615055131861773120
+    second: Map Greyed Out Tiles_39
+  - first:
+      213: 3482895317732121757
+    second: Map Greyed Out Tiles_40
+  - first:
+      213: 987342448324992388
+    second: Map Greyed Out Tiles_41
+  - first:
+      213: -6946857154389977987
+    second: Map Greyed Out Tiles_42
+  - first:
+      213: 1145368355634873897
+    second: Map Greyed Out Tiles_43
+  - first:
+      213: -8425666465088940878
+    second: Map Greyed Out Tiles_44
+  - first:
+      213: -2810323621190252030
+    second: Map Greyed Out Tiles_45
+  - first:
+      213: -3310614497907944940
+    second: Map Greyed Out Tiles_46
+  - first:
+      213: 5476716032212778619
+    second: Map Greyed Out Tiles_47
+  - first:
+      213: -8113071457280889569
+    second: Map Greyed Out Tiles_48
+  - first:
+      213: -2292120526093066512
+    second: Map Greyed Out Tiles_49
+  - first:
+      213: -9067359144952217120
+    second: Map Greyed Out Tiles_50
+  - first:
+      213: 4040909778929001907
+    second: Map Greyed Out Tiles_51
+  - first:
+      213: -34682694959403023
+    second: Map Greyed Out Tiles_52
+  - first:
+      213: -2878581644524292209
+    second: Map Greyed Out Tiles_53
+  - first:
+      213: 7747494793865987731
+    second: Map Greyed Out Tiles_54
+  - first:
+      213: 4193964777146613517
+    second: Map Greyed Out Tiles_55
+  - first:
+      213: -6136426940548644437
+    second: Map Greyed Out Tiles_56
+  - first:
+      213: 7654372576577764556
+    second: Map Greyed Out Tiles_57
+  - first:
+      213: -1774112450808580911
+    second: Map Greyed Out Tiles_58
+  - first:
+      213: -300363698734603439
+    second: Map Greyed Out Tiles_59
+  - first:
+      213: -7545205497037678647
+    second: Map Greyed Out Tiles_60
+  - first:
+      213: 1780616505548910940
+    second: Map Greyed Out Tiles_61
+  - first:
+      213: -7442598529298052933
+    second: Map Greyed Out Tiles_62
+  - first:
+      213: -6427743817198715866
+    second: Map Greyed Out Tiles_63
+  - first:
+      213: 4785858943105356870
+    second: Map Greyed Out Tiles_64
+  - first:
+      213: 5197037646351727309
+    second: Map Greyed Out Tiles_65
+  - first:
+      213: -5005201755501681474
+    second: Map Greyed Out Tiles_66
+  - first:
+      213: 8037177445901632824
+    second: Map Greyed Out Tiles_67
+  - first:
+      213: -8103465229578200341
+    second: Map Greyed Out Tiles_68
+  - first:
+      213: 3240874666239861350
+    second: Map Greyed Out Tiles_69
+  - first:
+      213: 4348628093748667806
+    second: Map Greyed Out Tiles_70
+  - first:
+      213: 3094502179586216436
+    second: Map Greyed Out Tiles_71
+  - first:
+      213: -3726568664628687375
+    second: Map Greyed Out Tiles_72
+  - first:
+      213: -8556066017589999880
+    second: Map Greyed Out Tiles_73
+  - first:
+      213: 3912583371957358425
+    second: Map Greyed Out Tiles_74
+  - first:
+      213: 6315304557822236717
+    second: Map Greyed Out Tiles_75
+  - first:
+      213: 5376136602319068562
+    second: Map Greyed Out Tiles_76
+  - first:
+      213: -1038676798158963880
+    second: Map Greyed Out Tiles_77
+  - first:
+      213: 7659987728080467762
+    second: Map Greyed Out Tiles_78
+  - first:
+      213: 3889313237443583120
+    second: Map Greyed Out Tiles_79
+  - first:
+      213: 3305057609675541950
+    second: Map Greyed Out Tiles_80
+  - first:
+      213: -6042906113662518753
+    second: Map Greyed Out Tiles_81
+  - first:
+      213: 202113554354174291
+    second: Map Greyed Out Tiles_82
+  - first:
+      213: -5999093570439278574
+    second: Map Greyed Out Tiles_83
+  - first:
+      213: 7991059230703481108
+    second: Map Greyed Out Tiles_84
+  - first:
+      213: 1212340280098618046
+    second: Map Greyed Out Tiles_85
+  - first:
+      213: 7258401814817518180
+    second: Map Greyed Out Tiles_86
+  - first:
+      213: -4517591741502502982
+    second: Map Greyed Out Tiles_87
+  - first:
+      213: 7257740035029011193
+    second: Map Greyed Out Tiles_88
+  - first:
+      213: 8973070138053462832
+    second: Map Greyed Out Tiles_89
+  - first:
+      213: 1507158217264786701
+    second: Map Greyed Out Tiles_90
+  - first:
+      213: -8872095998593988893
+    second: Map Greyed Out Tiles_91
+  - first:
+      213: 8405819155865152506
+    second: Map Greyed Out Tiles_92
+  - first:
+      213: -1870462652168690467
+    second: Map Greyed Out Tiles_93
+  - first:
+      213: 854945827945001618
+    second: Map Greyed Out Tiles_94
+  - first:
+      213: 7689564013527581630
+    second: Map Greyed Out Tiles_95
+  - first:
+      213: -8834837839060919821
+    second: Map Greyed Out Tiles_96
+  - first:
+      213: -245842642510599341
+    second: Map Greyed Out Tiles_97
+  - first:
+      213: -3728276837247350531
+    second: Map Greyed Out Tiles_98
+  - first:
+      213: -5872880837129485276
+    second: Map Greyed Out Tiles_99
+  - first:
+      213: 1089769377864773700
+    second: Map Greyed Out Tiles_100
+  - first:
+      213: -2716614976121555582
+    second: Map Greyed Out Tiles_101
+  - first:
+      213: 8264276805456638402
+    second: Map Greyed Out Tiles_102
+  - first:
+      213: 2813688957456678199
+    second: Map Greyed Out Tiles_103
+  - first:
+      213: -8614269967301452357
+    second: Map Greyed Out Tiles_104
+  - first:
+      213: -7012037090667793778
+    second: Map Greyed Out Tiles_105
+  - first:
+      213: -4549608929428354420
+    second: Map Greyed Out Tiles_106
+  - first:
+      213: -5792443982176248468
+    second: Map Greyed Out Tiles_107
+  - first:
+      213: -5820284271082876543
+    second: Map Greyed Out Tiles_108
+  - first:
+      213: 9034246146817126895
+    second: Map Greyed Out Tiles_109
+  - first:
+      213: -7348859332704710512
+    second: Map Greyed Out Tiles_110
+  - first:
+      213: 1803263418158473931
+    second: Map Greyed Out Tiles_111
+  - first:
+      213: 8013783240885608513
+    second: Map Greyed Out Tiles_112
+  - first:
+      213: 327289804780431748
+    second: Map Greyed Out Tiles_113
+  - first:
+      213: 5004991003830123864
+    second: Map Greyed Out Tiles_114
+  - first:
+      213: 449481297242404704
+    second: Map Greyed Out Tiles_115
+  - first:
+      213: -3081510082605075919
+    second: Map Greyed Out Tiles_116
+  - first:
+      213: -3661621207745261997
+    second: Map Greyed Out Tiles_117
+  - first:
+      213: -7641776173690198001
+    second: Map Greyed Out Tiles_118
+  - first:
+      213: 9060467966124523084
+    second: Map Greyed Out Tiles_119
+  - first:
+      213: -3766862513568665804
+    second: Map Greyed Out Tiles_120
+  - first:
+      213: -4004533442394538771
+    second: Map Greyed Out Tiles_121
+  - first:
+      213: 4509226840334004026
+    second: Map Greyed Out Tiles_122
+  - first:
+      213: -6366276561725617635
+    second: Map Greyed Out Tiles_123
+  - first:
+      213: 3865992018479813276
+    second: Map Greyed Out Tiles_124
+  - first:
+      213: -2504509916254581255
+    second: Map Greyed Out Tiles_125
+  - first:
+      213: -547251154586166596
+    second: Map Greyed Out Tiles_126
+  - first:
+      213: 681843430106490002
+    second: Map Greyed Out Tiles_127
+  - first:
+      213: 2271207285159732767
+    second: Map Greyed Out Tiles_128
+  - first:
+      213: 7679774908360309770
+    second: Map Greyed Out Tiles_129
+  - first:
+      213: 8318231614818130279
+    second: Map Greyed Out Tiles_130
+  - first:
+      213: -7228531406260773752
+    second: Map Greyed Out Tiles_131
+  - first:
+      213: 970916040120393518
+    second: Map Greyed Out Tiles_132
+  - first:
+      213: -2995886031976116681
+    second: Map Greyed Out Tiles_133
+  - first:
+      213: 4462401661523872369
+    second: Map Greyed Out Tiles_134
+  - first:
+      213: -5329176517914836220
+    second: Map Greyed Out Tiles_135
+  - first:
+      213: -2366614114777614857
+    second: Map Greyed Out Tiles_136
+  - first:
+      213: 9165154483978968818
+    second: Map Greyed Out Tiles_137
+  - first:
+      213: -2701123906324176144
+    second: Map Greyed Out Tiles_138
+  - first:
+      213: -519193632114955164
+    second: Map Greyed Out Tiles_139
+  - first:
+      213: -8233051623557610919
+    second: Map Greyed Out Tiles_140
+  - first:
+      213: 2999104659368591778
+    second: Map Greyed Out Tiles_141
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Map Greyed Out Tiles_19
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f82369c96d9e43d0800000000000000
+      internalID: -3220463605847480079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map Greyed Out Tiles_22
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18eb1b23f9ea32680800000000000000
+      internalID: -8780982849668792703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map Greyed Out Tiles_23
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42508a9e4875bf440800000000000000
+      internalID: 4970662842100876580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map Greyed Out Tiles_24
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ac7332d791f9a640800000000000000
+      internalID: 5091866488088001697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map Greyed Out Tiles_27
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eea74702cc48b980800000000000000
+      internalID: -8522977898569158944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map Greyed Out Tiles_30
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53fb413595d71d920800000000000000
+      internalID: 3013327448287002421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map Greyed Out Tiles_32
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 836632c15188cc360800000000000000
+      internalID: 7191272329251612216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map Greyed Out Tiles_34
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 833aaadf1d1331200800000000000000
+      internalID: 149517990607102776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map Greyed Out Tiles_37
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d915780dc6b0489a0800000000000000
+      internalID: -6231843422391021155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map Greyed Out Tiles_40
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9c5b4b96dab55030800000000000000
+      internalID: 3482895317732121757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map Greyed Out Tiles_41
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48d5310c9beb3bd00800000000000000
+      internalID: 987342448324992388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map Greyed Out Tiles_42
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d74543f593ec79f90800000000000000
+      internalID: -6946857154389977987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map Greyed Out Tiles_53
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f877b25ee393d08d0800000000000000
+      internalID: -2878581644524292209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map Greyed Out Tiles_56
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba10672b53807daa0800000000000000
+      internalID: -6136426940548644437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map Greyed Out Tiles_59
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1536081bec4e4dbf0800000000000000
+      internalID: -300363698734603439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map Greyed Out Tiles_60
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c79ebf939b0a4790800000000000000
+      internalID: -7545205497037678647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map Greyed Out Tiles_61
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c51b076174506b810800000000000000
+      internalID: 1780616505548910940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map Greyed Out Tiles_70
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e956c24163e695c30800000000000000
+      internalID: 4348628093748667806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map Greyed Out Tiles_71
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f198e24651e1fa20800000000000000
+      internalID: 3094502179586216436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map Greyed Out Tiles_82
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3597293f43d0ec200800000000000000
+      internalID: 202113554354174291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map Greyed Out Tiles_87
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab7418f0f3a4e41c0800000000000000
+      internalID: -4517591741502502982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map Greyed Out Tiles_99
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 424c2b69ef55f7ea0800000000000000
+      internalID: -5872880837129485276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map Greyed Out Tiles_100
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4407abea973af1f00800000000000000
+      internalID: 1089769377864773700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map Greyed Out Tiles_103
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73df4a1033b3c0720800000000000000
+      internalID: 2813688957456678199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map Greyed Out Tiles_104
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbd5ea7ea17f37880800000000000000
+      internalID: -8614269967301452357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map Greyed Out Tiles_105
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e82f1eada6d30be90800000000000000
+      internalID: -7012037090667793778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map Greyed Out Tiles_108
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 181df4aea423a3fa0800000000000000
+      internalID: -5820284271082876543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map Greyed Out Tiles_109
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe1f97a4107106d70800000000000000
+      internalID: 9034246146817126895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map Greyed Out Tiles_112
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14027f3166da63f60800000000000000
+      internalID: 8013783240885608513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map Greyed Out Tiles_113
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4896b88e754ca8400800000000000000
+      internalID: 327289804780431748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map Greyed Out Tiles_116
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1323a8a08e64c35d0800000000000000
+      internalID: -3081510082605075919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map Greyed Out Tiles_121
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: decb6e21d0a0d68c0800000000000000
+      internalID: -4004533442394538771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map Greyed Out Tiles_125
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fdc33920813e3dd0800000000000000
+      internalID: -2504509916254581255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map Greyed Out Tiles_126
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cba18ff69f5c768f0800000000000000
+      internalID: -547251154586166596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map Greyed Out Tiles_129
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0c36c7079a049a60800000000000000
+      internalID: 7679774908360309770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map Greyed Out Tiles_130
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76998a0f49b407370800000000000000
+      internalID: 8318231614818130279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
